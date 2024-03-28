@@ -19,13 +19,13 @@ function Home() {
     <section id="home" className="home-section">
       <div className="carousel-container">
         <div className={currentSlide === 0 ? 'carousel-item active' : 'carousel-item'}>
-          <img src={Banner1} alt="Image 1" />
+          <img src={Banner1} alt="Image1" />
         </div>
         <div className={currentSlide === 1 ? 'carousel-item active' : 'carousel-item'}>
-          <img src={Banner2} alt="Image 2" />
+          <img src={Banner2} alt="Image2" />
         </div>
         <div className={currentSlide === 2 ? 'carousel-item active' : 'carousel-item'}>
-          <img src={Banner3} alt="Image 3" />
+          <img src={Banner3} alt="Image3" />
         </div>
       </div>
 

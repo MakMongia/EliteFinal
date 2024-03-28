@@ -1,0 +1,72 @@
+[
+  {
+    "day": "Monday",
+    "time": "09:00 AM - 11:00 AM",
+    "event": "Practice Drills"
+  },
+  {
+    "day": "Monday",
+    "time": "02:00 PM - 04:00 PM",
+    "event": "Team Meeting"
+  },
+  {
+    "day": "Tuesday",
+    "time": "09:00 AM - 11:00 AM",
+    "event": "Shooting Drills"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11:30 AM - 01:30 PM",
+    "event": "Defensive Drills"
+  },
+  {
+    "day": "Wednesday",
+    "time": "08:00 AM - 10:00 AM",
+    "event": "Team Strategy"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10:30 AM - 12:30 PM",
+    "event": "Scrimmage Games"
+  },
+  {
+    "day": "Thursday",
+    "time": "09:00 AM - 11:00 AM",
+    "event": "Conditioning"
+  },
+  {
+    "day": "Thursday",
+    "time": "11:30 AM - 01:30 PM",
+    "event": "Skill Development"
+  },
+  {
+    "day": "Friday",
+    "time": "08:00 AM - 10:00 AM",
+    "event": "Open Gym Session"
+  },
+  {
+    "day": "Friday",
+    "time": "10:30 AM - 12:30 PM",
+    "event": "Video Analysis"
+  },
+  {
+    "day": "Saturday",
+    "time": "10:00 AM - 12:00 PM",
+    "event": "Youth League"
+  },
+  {
+    "day": "Saturday",
+    "time": "02:00 PM - 04:00 PM",
+    "event": "Scrimmage Games"
+  },
+  {
+    "day": "Sunday",
+    "time": "02:00 PM - 04:00 PM",
+    "event": "Friendly Matches"
+  },
+  {
+    "day": "Sunday",
+    "time": "06:00 PM - 08:00 PM",
+    "event": "Team Dinner"
+  }
+]
