@@ -3,6 +3,7 @@ import './App.test';
 import Header from './Component/Header/Header';
 import Home from './Component/Main/Home';
 import Schedule from './Component/Main/Schedule/Schedule';
+import Program from './Component/Main/Program/Programs';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Header />
       <Home />
       <Schedule />
-      </div>
+      <Program />
+    </div>
   );
 }
 
