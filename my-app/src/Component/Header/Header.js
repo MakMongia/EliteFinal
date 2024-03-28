@@ -1,8 +1,9 @@
 import React from 'react';
-import logo from '../images/logo.png';
-import '../styles/Header.css';
+import logo from '../../assets/images/Logo.png';
 
 function Header() {
+
+
   return (
     <header>
       <nav id="navbar">
@@ -13,9 +14,9 @@ function Header() {
           <li><a href="#events">Events</a></li>
           <li><a href="#news">News</a></li>
           <li><a href="#merch">Merch</a></li>
-          <li><a href="#contactus">Contact Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
           <li><img src={logo} alt="Logo" /></li>
-        </ul>
+       </ul>
       </nav>
     </header>
   );
