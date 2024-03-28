@@ -1,0 +1,357 @@
+﻿/* import fonts for HTML */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+/* General Settings */
+body {
+    background-color: #eaeaea; 
+    color: #000; 
+    height: 1500px;
+}
+
+h1 {
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 20px; 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav a {
+    font-family: 'Lato', sans-serif; 
+}
+
+/* Adjust the vertical alignment for headings, icons, and links */
+h1, h2, nav img, nav a {
+    vertical-align: middle;
+    align-items: center;
+}
+
+/* Header styles */
+header {
+    background-color: #000000;
+    color: white;
+    padding: 40px;
+    margin: 0;
+}
+
+/* Nav styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px; /* Adjusted padding */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navbar icon and link settings */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 5px; 
+}
+
+nav.scrolled a {
+    color: black; /* Color when scrolled */
+}
+
+nav img {
+    width: 95px; /* Adjust the width for a larger size */
+    height: auto;
+    margin-left: 15px; /* Adjust the margin to move the icons to the left */
+}
+
+/* Main content styles */
+.main-content {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 20px;
+}
+
+
+
+/* Home section styles */
+#home {
+  margin-bottom: 80px; /* Increase the margin bottom to create a larger gap */
+    margin-top: 5px;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+#prevBtn,
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+#prevBtn {
+  left: 28px;
+}
+
+#nextBtn {
+  right: 28px;
+}
+
+
+/* Table styles for Events and Schedule */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden; /* Hide overflowing content */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a card-like effect */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    transition: background 0.3s; /* Smooth transition on hover */
+}
+
+/* Alternate row background color for better readability */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect */
+tr:hover {
+    background-color: #ddd; /* Light gray on hover */
+}
+
+/* Remove border-radius on top-left and top-right for the first row */
+th:first-child, td:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Remove border-radius on bottom-left and bottom-right for the last row */
+th:last-child, td:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+/* Event*/
+#schedule {
+  margin-bottom: 80px; 
+}
+
+
+/* Program section styles */
+#Program {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.program-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /
+}
+
+.program-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.program-image {
+    flex: 1;
+}
+
+.program-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+/* Events section styles */
+#events {
+  margin-bottom: 40px; 
+}
+
+.events-section table {
+    margin-top: 20px;
+}
+
+
+/* News section styles */
+
+#news {
+  margin-bottom: 40px; 
+}
+
+#news iframe, #news video {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 560px; 
+  margin: 0 auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  margin-top: 20px; 
+}
+
+.video-description {
+  margin-top: 15px;
+}
+
+
+/* Merch section styles */
+
+#merch {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.merch-container {
+  text-align: center; /* Center the content within the container */
+}
+
+.merch-section figure {
+  margin-top: 20px;
+  max-height: 400px; /* Adjust the maximum height as needed */
+}
+
+
+.merch-section figure img {
+  width: 100%; /* Set the width to 100% for responsiveness */
+  max-width: 100%; /* Ensure the image doesn't exceed its original size */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Ensure the image behaves as a block element */
+  margin: 0 auto; /* Center the image */
+  max-height: 300px; /* Set a maximum height to avoid excessive stretching */
+}
+
+
+
+/* Contact Us section styles */
+
+#contactus {
+  margin-bottom: 40px; 
+}
+
+.container {
+    max-width: 600px; /* Adjust the max-width as needed for the increased size */
+    margin: 0 auto;
+}
+
+label, input, textarea, button {
+    display: block;
+    margin-bottom: 0px; /* Increased margin for better spacing */
+}
+
+label {
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 15px; /* Increased padding for better button size */
+    cursor: pointer;
+}
+
+/* Style for the popup */
+.popup {
+display: none;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 20px;
+background-color: #fff;
+border: 1px solid #ccc;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+z-index: 999;
+}
+
+
+/* Adjust the vertical alignment for headings, icons, and links */
+h1, h2, nav img, nav a, label {
+    vertical-align: middle;
+    align-items: center;
+}
+
+
+/* Footer styles */
+.footer {
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Footer contact info styles */
+.contact-info p {
+    margin: 0;
+}
+
+/* Footer policies styles */
+.policies a {
+    margin-right: 20px;
+    color: #333;
+    text-decoration: none;
+}
