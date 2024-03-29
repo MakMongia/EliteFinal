@@ -1,9 +1,24 @@
 import React, { useState } from 'react';
-import './Schedule.css';
+import DataTable from '../DataTable/dataTable';
 import scheduleDataJson from '../Schedule/scheduleData.json';
+import './Schedule.css';
 
 function Schedule() {
   const [search, setSearch] = useState('');
+
+const filteredData = scheduleDataJson.filter((item) => {
+  if (!item || typeof item.Day !== 'string' || typeof item.Time !== 'string' || typeof item.Event !== 'string') {
+    return false;
+  }
+  
+  const searchText = search.toLowerCase();
+  return (
+    item.Day.toLowerCase().includes(searchText) ||
+    item.Time.toLowerCase().includes(searchText) ||
+    item.Event.toLowerCase().includes(searchText)
+  );
+});
+
 
   return (
     <section id="schedule">
@@ -16,36 +31,10 @@ function Schedule() {
           onChange={(e) => setSearch(e.target.value)}
           className="search-input"
         />
-        {scheduleDataJson.length > 0 ? (
-          <table className="schedule-table">
-            <thead>
-              <tr>
-                <th>Days</th>
-                <th>Time</th>
-                <th>Event</th>
-              </tr>
-            </thead>
-            <tbody>
-              {scheduleDataJson
-                .filter((item) => {
-                  const columns = Object.values(item).map((value) =>
-                    value.toString().toLowerCase()
-                  );
-                  return columns.some((column) =>
-                    column.includes(search.toLowerCase())
-                  );
-                })
-                .map((scheduleItem, index) => (
-                  <tr key={index}>
-                    <td>{scheduleItem.day}</td>
-                    <td>{scheduleItem.time}</td>
-                    <td>{scheduleItem.event}</td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
+        {filteredData.length > 0 ? (
+          <DataTable data={filteredData} />
         ) : (
-          <p>No schedule data available</p>
+          <p><strong>No schedule data available</strong></p>
         )}
       </div>
     </section>

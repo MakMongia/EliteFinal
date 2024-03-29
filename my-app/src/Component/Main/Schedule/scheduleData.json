@@ -1,68 +1,68 @@
 [
   {
-    "day": "Monday",
-    "time": "08:00 AM - 10:00 AM",
-    "event": "Junior Training"
+    "Day": "Monday",
+    "Time": "08:00 AM - 10:00 AM",
+    "Event": "Junior Training"
+  },
+  {
+    "Day": "Monday",
+    "Time": "10:30 AM - 12:30 PM",
+    "Event": "Senior Training"
   },
   {
     "day": "Monday",
-    "time": "10:30 AM - 12:30 PM",
-    "event": "Senior Training"
-  },
-  {
-    "day": "Monday",
-    "time": "01:00 PM - 03:00 PM",
-    "event": "Tactical Workshop"
+    "Time": "01:00 PM - 03:00 PM",
+    "Event": "Tactical Workshop"
   },
   {
     "day": "Tuesday",
-    "time": "09:00 AM - 11:00 AM",
-    "event": "Shooting Drills"
+    "Time": "09:00 AM - 11:00 AM",
+    "Event": "Shooting Drills"
   },
   {
-    "day": "Tuesday",
-    "time": "11:30 AM - 01:30 PM",
-    "event": "Defensive Drills"
+    "Day": "Tuesday",
+    "Time": "11:30 AM - 01:30 PM",
+    "Event": "Defensive Drills"
   },
   {
-    "day": "Wednesday",
-    "time": "08:00 AM - 10:00 AM",
-    "event": "Team Strategy"
+    "Day": "WednesDay",
+    "Time": "08:00 AM - 10:00 AM",
+    "Event": "Team Strategy"
   },
   {
-    "day": "Wednesday",
-    "time": "10:30 AM - 12:30 PM",
-    "event": "Scrimmage Games"
+    "Day": "Wednesday",
+    "Time": "10:30 AM - 12:30 PM",
+    "Event": "Scrimmage Games"
   },
   {
-    "day": "Thursday",
-    "time": "09:00 AM - 11:00 AM",
-    "event": "Conditioning"
+    "Day": "Thursday",
+    "Time": "09:00 AM - 11:00 AM",
+    "Event": "Conditioning"
   },
   {
-    "day": "Thursday",
-    "time": "11:30 AM - 01:30 PM",
-    "event": "Skill Development"
+    "Day": "Thursday",
+    "Time": "11:30 AM - 01:30 PM",
+    "Event": "Skill Development"
   },
   {
-    "day": "Friday",
-    "time": "08:00 AM - 10:00 AM",
-    "event": "Open Gym Session"
+    "Day": "Friday",
+    "Time": "08:00 AM - 10:00 AM",
+    "Event": "Open Gym Session"
   },
   {
-    "day": "Friday",
-    "time": "10:30 AM - 12:30 PM",
-    "event": "Video Analysis"
+    "Day": "Friday",
+    "Time": "10:30 AM - 12:30 PM",
+    "Event": "Video Analysis"
   },
   {
-    "day": "Saturday",
-    "time": "10:00 AM - 12:00 PM",
-    "event": "Youth League"
+    "Day": "Saturday",
+    "Time": "10:00 AM - 12:00 PM",
+    "Event": "Youth League"
   },
   {
-    "day": "Sunday",
-    "time": "02:00 PM - 04:00 PM",
-    "event": "Friendly Matches"
+    "Day": "Sunday",
+    "Time": "02:00 PM - 04:00 PM",
+    "Event": "Friendly Matches"
   }
 ]
 
