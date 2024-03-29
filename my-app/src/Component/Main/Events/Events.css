@@ -1,0 +1,30 @@
+/* Events.css */
+
+#events {
+  margin-top: 20px;
+}
+
+#events h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#events table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#events th, #events td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+#events th {
+  background-color: #f2f2f2;
+}
+
+#events tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

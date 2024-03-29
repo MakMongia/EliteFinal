@@ -1,6 +1,7 @@
 // Events.js
 import React from 'react';
 import eventsData from './eventsData.json';
+import './Events.css';
 
 function Events() {
   return (
