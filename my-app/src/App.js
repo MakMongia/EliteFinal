@@ -7,6 +7,8 @@ import Program from './Component/Main/Program/Programs';
 import Events from './Component/Main/Events/Events';
 import ContactUs from './Component/Main/ContactUs/ContactUs';
 import Merch from './Component/Main/Merch/Merch'; 
+import News from './Component/Main/News/News';
+
 
 function App() {
   return (
@@ -17,8 +19,11 @@ function App() {
       <Schedule />
       <Program />
       <Events />
+      <News />
       <Merch />
       <ContactUs />
+
+
 
     </div>
   );
