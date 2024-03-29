@@ -1,4 +1,5 @@
 import React from 'react';
+import './Program.css'; // Import the CSS file
 import Program1 from '../../../assets/images/Program1.jpg';
 import Program2 from '../../../assets/images/Program2.jpg';
 

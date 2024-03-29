@@ -1,0 +1,27 @@
+/* Programs.css */
+
+#Program {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.program-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.program-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.program-image {
+  flex: 1;
+}
+
+.program-image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}

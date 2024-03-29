@@ -1,6 +1,6 @@
-// Import the necessary modules
 import React from 'react';
 import MerchImage from '../../../assets/images/Merch.png'; // Adjust the path accordingly
+import './Merch.css'; // Import the CSS file
 
 // Define the Merch component
 function Merch() {

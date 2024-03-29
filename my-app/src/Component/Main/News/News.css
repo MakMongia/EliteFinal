@@ -1,0 +1,24 @@
+/* News.css */
+
+#news {
+  margin-bottom: 40px;
+}
+
+.video-container {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.video-container iframe,
+.video-container video {
+  width: 100%;
+  height: 315px;
+  margin-top: 20px;
+}
+
+.video-description {
+  margin-top: 15px;
+}

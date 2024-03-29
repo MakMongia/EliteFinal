@@ -1,0 +1,18 @@
+/* Footer.css */
+
+.footer {
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.policies a {
+  margin-right: 20px;
+  color: #333;
+  text-decoration: none;
+}

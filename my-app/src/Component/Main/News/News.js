@@ -1,6 +1,8 @@
 import React from 'react';
 import myVideo from '../../../assets/other-assets/Video1.mp4';
-
+import './News.css'; // Import the CSS file
+  
+  
 function News() {
   return (
     <section id="news">

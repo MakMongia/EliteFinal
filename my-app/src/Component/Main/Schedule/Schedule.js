@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// eslint-disable-next-line
+import './Schedule.css';
 import scheduleDataJson from '../Schedule/scheduleData.json';
 
 
