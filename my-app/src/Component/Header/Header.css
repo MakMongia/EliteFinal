@@ -1,16 +1,14 @@
-/* Header component styles */
-
-header {
-  background-color: #000;
-  color: white;
-  padding: 40px;
-  margin: 0;
-}
-
+/* Navbar styles */
 #navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding-top: 0.1px;
+  padding-bottom: 0.1px;
+  left :0;
+  right: 0;
 }
 
 #navbar ul {
@@ -18,10 +16,14 @@ header {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px; /* Add left padding to the navbar */
+  padding-right: 10px; /* Add right padding to the navbar */
 }
 
 #navbar ul li {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 #navbar ul li:last-child {
@@ -38,7 +40,19 @@ header {
   text-decoration: underline;
 }
 
+/* Ensure the logo stays within the navbar */
 #navbar ul li img {
-  width: 95px;
+  max-width: 100px; /* Limit the logo's maximum width */
   height: auto;
+}
+
+/* Header styles */
+.fixed-header {
+  padding: 0;
+  margin: 0;
+}
+
+/* Add padding to the body to offset the fixed header */
+body {
+  padding-top: 70px; /* Adjust as needed to ensure content is not hidden behind the fixed header */
 }

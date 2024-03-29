@@ -4,39 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 
-/* General Settings */
-body {
-    background-color: #eaeaea; 
-    color: #000; 
-    height: 1500px;
-}
 
-h1 {
-    font-size: 32px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-}
-
-h2 {
-    font-size: 20px; 
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-
-}
-
-p {
-    font-family: 'Quicksand', sans-serif;
-}
-
-nav a {
-    font-family: 'Lato', sans-serif; 
-}
-
-/* Adjust the vertical alignment for headings, icons, and links */
-h1, h2, nav img, nav a {
-    vertical-align: middle;
-    align-items: center;
-}
 
 /* Header styles */
 header {

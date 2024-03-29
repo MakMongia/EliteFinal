@@ -1,13 +1,38 @@
+/* import fonts for HTML */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* General Settings */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #eaeaea; 
+    color: #000; 
+    height: 1500px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 20px; 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav a {
+    font-family: 'Lato', sans-serif; 
+}
+
+/* Adjust the vertical alignment for headings, icons, and links */
+h1, h2, nav img, nav a {
+    vertical-align: middle;
+    align-items: center;
 }
