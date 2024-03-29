@@ -13,7 +13,6 @@ import Footer from './Component/Footer/Footer';
 function App() {
   return (
     <div className="App">
-      <h1> Elite Hoops Club</h1>
       <Header />
       <Home />
       <Schedule />
