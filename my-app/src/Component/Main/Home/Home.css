@@ -1,8 +1,10 @@
-/* Home.css */
-
 .home-section {
   margin-bottom: 80px; /* Increase the margin bottom to create a larger gap */
-  margin-top: 5px;
+  margin-top: 35px; /* Adjusted top margin */
+}
+
+.carousel-wrapper {
+  position: relative;
 }
 
 .carousel-container {
@@ -17,6 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative; /* Ensure relative positioning for absolutely positioned buttons */
 }
 
 .carousel-item img {
@@ -31,18 +34,20 @@
 #nextBtn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 10px;
   cursor: pointer;
   border: none;
+  z-index: 1;
 }
 
 #prevBtn {
-  left: 28px;
+  left: 10px; /* Adjust as needed */
+  transform: translateY(-50%);
 }
 
 #nextBtn {
-  right: 28px;
+  right: 10px; /* Adjust as needed */
+  transform: translateY(-50%);
 }
