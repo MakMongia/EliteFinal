@@ -40,8 +40,12 @@ function Home() {
         </div>
       </div>
 
-      <button id="prevBtn" onClick={prevSlide}>Previous</button>
-      <button id="nextBtn" onClick={nextSlide}>Next</button>
+      <button id="prevBtn" onClick={prevSlide}>
+        <i className="fas fa-chevron-left"></i> {/* Font Awesome left arrow icon */}
+      </button>
+      <button id="nextBtn" onClick={nextSlide}>
+        <i className="fas fa-chevron-right"></i> {/* Font Awesome right arrow icon */}
+      </button>
     </section>
   );
 }
