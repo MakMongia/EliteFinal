@@ -1,13 +1,18 @@
 [
   {
     "day": "Monday",
-    "time": "09:00 AM - 11:00 AM",
-    "event": "Practice Drills"
+    "time": "08:00 AM - 10:00 AM",
+    "event": "Junior Training"
   },
   {
     "day": "Monday",
-    "time": "02:00 PM - 04:00 PM",
-    "event": "Team Meeting"
+    "time": "10:30 AM - 12:30 PM",
+    "event": "Senior Training"
+  },
+  {
+    "day": "Monday",
+    "time": "01:00 PM - 03:00 PM",
+    "event": "Tactical Workshop"
   },
   {
     "day": "Tuesday",
@@ -55,18 +60,9 @@
     "event": "Youth League"
   },
   {
-    "day": "Saturday",
-    "time": "02:00 PM - 04:00 PM",
-    "event": "Scrimmage Games"
-  },
-  {
     "day": "Sunday",
     "time": "02:00 PM - 04:00 PM",
     "event": "Friendly Matches"
-  },
-  {
-    "day": "Sunday",
-    "time": "06:00 PM - 08:00 PM",
-    "event": "Team Dinner"
   }
 ]
+
