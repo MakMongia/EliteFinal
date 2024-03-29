@@ -33,21 +33,20 @@
 #prevBtn,
 #nextBtn {
   position: absolute;
-  top: 50%;
+  top: 60%;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 10px;
   cursor: pointer;
   border: none;
   z-index: 1;
+  transform: translateY(-50%); /* Adjust to vertically center the buttons */
 }
 
 #prevBtn {
   left: 10px; /* Adjust as needed */
-  transform: translateY(-50%);
 }
 
 #nextBtn {
   right: 10px; /* Adjust as needed */
-  transform: translateY(-50%);
 }
