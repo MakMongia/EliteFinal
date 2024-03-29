@@ -8,7 +8,7 @@ import Events from './Component/Main/Events/Events';
 import ContactUs from './Component/Main/ContactUs/ContactUs';
 import Merch from './Component/Main/Merch/Merch'; 
 import News from './Component/Main/News/News';
-
+import Footer from './Component/Footer/Footer';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
       <News />
       <Merch />
       <ContactUs />
-
+      <Footer />
 
 
     </div>
