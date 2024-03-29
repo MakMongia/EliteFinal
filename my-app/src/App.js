@@ -5,7 +5,8 @@ import Home from './Component/Main/Home/Home';
 import Schedule from './Component/Main/Schedule/Schedule';
 import Program from './Component/Main/Program/Programs';
 import Events from './Component/Main/Events/Events';
-import ContactUs from './Component/Main/ContactUs/ContactUs'
+import ContactUs from './Component/Main/ContactUs/ContactUs';
+import Merch from './Component/Main/Merch/Merch'; 
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
       <Schedule />
       <Program />
       <Events />
+      <Merch />
       <ContactUs />
+
     </div>
   );
 }
