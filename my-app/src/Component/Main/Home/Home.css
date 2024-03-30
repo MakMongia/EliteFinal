@@ -75,3 +75,7 @@
 .dot-buttons button.active {
   background-color: #d8730ed3; /* Semi-transparent color for active dot button */
 }
+/* Compensate for the padding by using negative margins */
+.section-margintop {
+  margin-top: -45px; /* Adjust to match the padding-top value */
+}

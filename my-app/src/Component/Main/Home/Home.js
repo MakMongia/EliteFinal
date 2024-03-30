@@ -43,7 +43,7 @@ function Home() {
   };
 
   return (
-    <section id="home">
+    <section id="home" className='section-margintop'>
       {/* Carousel container */}
       <div className="carousel-container">
         {/* Carousel items */}
