@@ -20,14 +20,16 @@ function Merch() {
       <h1>Merch</h1>
       <div className="merch-container">
         {/* Make the image clickable and trigger the handleClick function */}
-        <button onClick={handleClick} className="popup-trigger">
+        <figure onClick={handleClick} className="popup-trigger">
           <img
             src={MerchImage}
             alt="Merch"
             onMouseOver={(e) => e.target.style.transform = 'scale(1.03)'}
             onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
           />
-        </button>
+          <br></br>
+          <figcaption>Elite Hoops Club T-Shirts are now 50% off, grab them before they are gone.</figcaption>
+        </figure>
         {/* Conditional rendering for the popup */}
         {showPopup && (
           <div className="popup">
