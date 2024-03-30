@@ -1,42 +1,61 @@
 /* Footer.css */
 
+/* Styles for the footer container */
 .footer {
   background-color: #ccc;
   padding: 20px;
   color: #333;
 }
 
+/* Styles for the container holding the links */
 .links-container {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Align links horizontally */
 }
 
+/* Styles for each row of links */
 .links-row {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  justify-content: space-between; /* Spread links evenly across the row */
+  margin-bottom: 10px; /* Add space between rows */
 }
 
+/* Styles for the contact information */
 .contact-info p {
-  margin: 5px 0;
+  margin: 5px 0; /* Add space around each contact info item */
 }
 
+/* Styles for the footer content section */
 .footer-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Spread content evenly */
+  align-items: center; /* Center items vertically */
 }
 
+/* Styles for the footer logo */
 .footer-logo {
-  width: 100px; /* Adjust the width as needed */
+  width: 200px; /* Adjust the width as needed */
 }
 
+/* Styles for the policies section */
 .policies {
-  text-align: center;
+  text-align: center; /* Center-align policy links */
 }
 
-.policies a {
-  margin-right: 20px;
+/* Styles for all footer links */
+.footer-link, .policies span {
+  font-weight: bold; /* Make the links bold */
+  text-decoration: none; /* Remove default underline */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-right: 20px; /* Add space between links */
+}
+
+/* Hover styles for footer links and policy links */
+.footer-link:hover, .policies span:hover {
+  text-decoration: underline; /* Underline the links on hover */
+}
+
+/* Set link color for policy links */
+.policies span {
   color: #333;
-  text-decoration: none;
 }
