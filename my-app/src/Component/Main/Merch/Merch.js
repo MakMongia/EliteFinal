@@ -34,8 +34,9 @@ function Merch() {
       {/* Conditional rendering for the popup */}
       {showPopup && (
         <div className="popup-message">
-          <p>Good Job! You found the secret code.</p>
-          <p>Please visit us on site and tell them this code "Elite Hoops is Awesome" to get a free T-Shirt on us.</p>
+          <br></br>
+          <p>Congratulations! You've discovered the secret code.</p>
+          <p>Feel free to drop by our location and mention the code "Elite Hoops Club is Awesome" to receive a complimentary T-shirt from us.</p>
         </div>
       )}
     </section>
