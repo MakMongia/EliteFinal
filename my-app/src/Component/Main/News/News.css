@@ -20,4 +20,25 @@
 /* Styles for the video description */
 .video-description {
   margin-top: 15px; /* Add spacing on the top */
+  text-align: center; /* Center align text */
+}
+
+/* Styles for the audio container */
+.audio-container {
+  margin-top: 20px; /* Add margin spacing on the top */
+  width: 100%; /* Occupy full width of the container */
+  max-width: 560px; /* Limit the maximum width to prevent excessive stretching */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Styles for audio element */
+.audio-container audio {
+  width: 100%; /* Occupy full width of the container */
+  margin-top: 20px; /* Add spacing on the top */
+}
+
+/* Styles for the audio description */
+.audio-description {
+  margin-top: 15px; /* Add spacing on the top */
+  text-align: center; /* Center align text */
 }

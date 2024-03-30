@@ -1,11 +1,13 @@
 import React from 'react';
 import myVideo from '../../../assets/other-assets/Video1.mp4';
+import myAudio from '../../../assets/other-assets/Audio.mp3';
 import './News.css'; // Import the CSS file
 import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
-  
+
 function News() {
   return (
-    <ErrorBoundary > {/* errorBoundary added here */}
+    <ErrorBoundary>
+      {/* errorBoundary added here */}
       <section id="news">
         <h1>News</h1>
 
@@ -36,9 +38,20 @@ function News() {
             Passion and Dedication put in the last slam dunk performed by one of the best players.
           </p>
         </div>
+
+        {/* Audio container */}
+        <div className="audio-container">
+          <audio controls autoPlay>
+            <source src={myAudio} type="audio/mpeg" />
+            Your browser does not support the audio tag.
+          </audio>
+          {/* Description for the audio */}
+          <p className="audio-description">
+            Enjoy this motivational audio speech given by our CEO.
+          </p>
+        </div>
       </section>
     </ErrorBoundary> /* errorBoundary ends here */
-
   );
 }
 
