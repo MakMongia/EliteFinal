@@ -1,19 +1,38 @@
 import React from 'react';
 import './Footer.css'; // Import the CSS file
+import logo from '../../assets/images/Logo.png'; // Import your logo image
 
 function Footer() {
   return (
     <footer className="footer">
-      <div className="contact-info">
-        <p>Elite Hoops Club</p>
-        <p>15 Springvale Drive</p>
-        <p>Mulgrave VIC-3112</p>
-        <p>Phone No. - +61 444444444</p>
-        <p>email - info@Elitehc.com.au</p>
+      <div className="links-container">
+        <div className="links-row">
+          <span className="footer-link" onClick={() => window.location.href = "#home"}>Home</span>
+          <span className="footer-link" onClick={() => window.location.href = "#schedule"}>Schedule</span>
+          <span className="footer-link" onClick={() => window.location.href = "#program"}>Programs</span>
+        </div>
+        <div className="links-row">
+          <span className="footer-link" onClick={() => window.location.href = "#events"}>Events</span>
+          <span className="footer-link" onClick={() => window.location.href = "#news"}>News</span>
+          <span className="footer-link" onClick={() => window.location.href = "#merch"}>Merch</span>
+        </div>
+        <div className="links-row">
+          <span className="footer-link" onClick={() => window.location.href = "#contactus"}>ContactUs</span>
+        </div>
+      </div>
+      <div className="footer-content">
+        <div className="contact-info">
+          <p>Elite Hoops Club</p>
+          <p>15 Springvale Drive</p>
+          <p>Mulgrave VIC-3112</p>
+          <p>Phone No. - +61 444444444</p>
+          <p>email - info@Elitehc.com.au</p>
+        </div>
+        <img src={logo} alt="Logo" className="footer-logo" />
       </div>
       <div className="policies">
-        <a href="privacy-statement-url">Privacy Statement</a>
-        <a href="terms-and-conditions-url">Terms and Conditions</a>
+        <span className="footer-link" onClick={() => window.location.href = "privacy-statement-url"}>Privacy Statement</span>
+        <span className="footer-link" onClick={() => window.location.href = "terms-and-conditions-url"}>Terms and Conditions</span>
       </div>
     </footer>
   );

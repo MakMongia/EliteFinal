@@ -3,12 +3,36 @@
 .footer {
   background-color: #ccc;
   padding: 20px;
-  text-align: center;
   color: #333;
 }
 
+.links-container {
+  display: flex;
+  justify-content: center;
+}
+
+.links-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
 .contact-info p {
-  margin: 0;
+  margin: 5px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 100px; /* Adjust the width as needed */
+}
+
+.policies {
+  text-align: center;
 }
 
 .policies a {
