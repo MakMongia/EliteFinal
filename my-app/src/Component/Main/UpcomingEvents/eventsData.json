@@ -1,15 +1,44 @@
-
 [
   {
     "Event Name": "Pre-Season Showcase",
-    "Date": "March 15, 2024"
+    "Date": "March 15, 2024",
+    "Theme": "Season kick-off",
+    "Location": "Elite Hoops Arena",
+    "Price": "$25"
   },
   {
     "Event Name": "Community Basketball Clinic",
-    "Date": "April 5, 2024"
+    "Date": "April 5, 2024",
+    "Theme": "Skill development",
+    "Location": "Local Community Center",
+    "Price": "Free"
   },
   {
     "Event Name": "Elite Hoops Championship",
-    "Date": "May 20, 2024"
+    "Date": "May 20, 2024",
+    "Theme": "Championship tournament",
+    "Location": "Elite Hoops Arena",
+    "Price": "$50"
+  },
+  {
+    "Event Name": "Summer Basketball Camp",
+    "Date": "June 10-15, 2024",
+    "Theme": "Skill enhancement",
+    "Location": "Elite Hoops Training Facility",
+    "Price": "$100"
+  },
+  {
+    "Event Name": "Basketball Tryouts",
+    "Date": "July 5-7, 2024",
+    "Theme": "Player selection",
+    "Location": "Elite Hoops Arena",
+    "Price": "Free"
+  },
+  {
+    "Event Name": "Youth League Finals",
+    "Date": "August 25, 2024",
+    "Theme": "Youth basketball",
+    "Location": "Local High School Gymnasium",
+    "Price": "$10"
   }
 ]

@@ -1,13 +1,32 @@
-import React from 'react';
-import eventsData from './eventsData.json'; // Importing event data from JSON file
-import DataTable from '../DataTable/dataTable'; // Importing DataTable component
-import '../DataTable/tableStyle.css'; // Importing CSS styles for DataTable
+import React, { useState } from 'react';
+import DataTable from '../DataTable/dataTable';
+import eventsData from './eventsData.json';
+import SearchBar from '../searchBar/searchBar'; // Import the SearchBar component
+import '../DataTable/tableStyle.css';
 
 function Events() {
+  const [filteredData, setFilteredData] = useState(eventsData);
+
+  const handleSearch = (searchText) => {
+    const newData = eventsData.filter((item) => {
+      // Search logic
+      const eventName = item['Event Name'].toLowerCase();
+      const date = item['Date'].toLowerCase();
+      const searchLowerCase = searchText.toLowerCase();
+      return eventName.includes(searchLowerCase) || date.includes(searchLowerCase);
+    });
+    setFilteredData(newData);
+  };
+
   return (
-    <section id="events"> {/* Section for displaying upcoming events */}
-      <h1>Upcoming Events</h1> {/* Heading for the section */}
-      <DataTable data={eventsData} /> {/* Rendering DataTable component with event data */}
+    <section id="events">
+      <h1>Upcoming Events</h1>
+      <SearchBar placeholder={"Search by Event Name and Date"} onSearch={handleSearch} />
+        {filteredData.length > 0 ? (
+          <DataTable data={filteredData} />
+        ) : (
+          <p><strong>No events match your search criteria. Please try searching for a different event.</strong></p>
+        )}
     </section>
   );
 }
