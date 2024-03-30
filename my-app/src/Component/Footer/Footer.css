@@ -26,17 +26,18 @@
 
 /* Styles for the contact information */
 .contact-info {
-  margin-left: 20px; /* Add space between the last list and contact info */
+  margin-left: 20px;
 }
 
 /* Styles for the footer logo */
 .footer-logo {
   width: 200px; /* Adjust the width as needed */
-  margin-top: -10px; /* Move the logo up slightly */
+  margin-top: -30px; /* Move the logo up slightly */
 }
 
 /* Styles for all footer links */
-.footer-link, span {
+.footer-link,
+.contact-info p {
   font-weight: bold; /* Make the links bold */
   text-decoration: none; /* Remove default underline */
   cursor: pointer; /* Change cursor to pointer on hover */
@@ -44,7 +45,7 @@
 }
 
 /* Hover styles for footer links and policy links */
-.footer-link:hover span:hover {
+.footer-link:hover{
   text-decoration: underline; /* Underline the links on hover */
 }
 
@@ -52,4 +53,9 @@
 .policies span {
   color: #333;
   text-align: center; /* Center-align the spans */
+}
+
+/* Reduce space between paragraphs in contact info */
+.contact-info p {
+  margin: 5px 0; /* Adjusted margin */
 }
