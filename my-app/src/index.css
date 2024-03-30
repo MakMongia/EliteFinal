@@ -37,3 +37,8 @@ h1, h2, nav img, nav a {
     vertical-align: middle;
     align-items: center;
 }
+
+section {
+  margin-bottom: 70px; /* margin for all the sections */
+}
+

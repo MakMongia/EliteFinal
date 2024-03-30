@@ -1,21 +1,43 @@
-import React from 'react';
-import MerchImage from '../../../assets/images/Merch.png'; // Adjust the path accordingly
-import './Merch.css'; // Import the CSS file
+import React, { useState } from 'react';
+import MerchImage from '../../../assets/images/Merch.png';
+import './Merch.css';
 
-// Define the Merch component
 function Merch() {
+  // State to manage the visibility of the popup
+  const [showPopup, setShowPopup] = useState(false);
+
+  // Function to handle click event on the image
+  const handleClick = () => {
+    setShowPopup(true);
+    // Set a timeout to hide the popup after 7 seconds
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 7000);
+  };
+
   return (
     <section id="merch">
-      {/* Merch needs to consist of product that users can view to be made aware of that are available to be sold at the club and any upcoming deals */}
       <h1>Merch</h1>
       <div className="merch-container">
-        <figure>
-          <img src={MerchImage} alt="Merch" />
-          <p>Elite Hoops Club T-Shirts are now 50% off, grab them before they are gone.</p>
-        </figure>
+        {/* Make the image clickable and trigger the handleClick function */}
+        <button onClick={handleClick} className="popup-trigger">
+          <img
+            src={MerchImage}
+            alt="Merch"
+            onMouseOver={(e) => e.target.style.transform = 'scale(1.03)'}
+            onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
+          />
+        </button>
+        {/* Conditional rendering for the popup */}
+        {showPopup && (
+          <div className="popup">
+            <p>Good Job! You found the secret code.</p>
+            <p>Please visit us on site and tell them this code "Elite Hoops is Awesome" to get a free T-Shirt on us</p>
+          </div>
+        )}
       </div>
     </section>
   );
 }
 
-export default Merch; // Export the Merch component
+export default Merch;
