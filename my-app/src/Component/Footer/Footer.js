@@ -16,11 +16,12 @@ function Footer() {
             <li><span className="footer-link" onClick={() => window.location.href = "#home"}>Home</span></li>
             <li><span className="footer-link" onClick={() => window.location.href = "#schedule"}>Schedule</span></li>
             <li><span className="footer-link" onClick={() => window.location.href = "#program"}>Programs</span></li>
+            <li><span className="footer-link" onClick={() => window.location.href = "#events"}>Events</span></li>
           </ul>
         </div>
         <div className="footer-list">
           <ul>
-            <li><span className="footer-link" onClick={() => window.location.href = "#events"}>Events</span></li>
+            <li><span className="footer-link" onClick={() => window.location.href = "#weather"}>Weather</span></li>
             <li><span className="footer-link" onClick={() => window.location.href = "#news"}>News</span></li>
             <li><span className="footer-link" onClick={() => window.location.href = "#merch"}>Merch</span></li>
             <li><span className="footer-link" onClick={() => window.location.href = "#contactus"}>Contact Us</span></li>

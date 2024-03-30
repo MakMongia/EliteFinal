@@ -12,6 +12,7 @@ import Footer from './Component/Footer/Footer';
 import ScrollToTopButton from './Component/Main/ScrollToTop/ScrollToTop';
 import Search from './Component/Main/searchBar/searchBar';
 import errorBoundary from './Component/errorBoundary';
+import Weather from './Component/Main/Weather/Weather';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Program />
       <Events />
       <News />
+      <Weather />
       <Merchandise />
       <ContactUs />
       <Footer />

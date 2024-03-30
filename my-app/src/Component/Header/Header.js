@@ -14,6 +14,7 @@ function Header() {
           <li><a href="#program">Programs</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="#news">News</a></li>
+          <li><a href="#weather">Weather</a></li>
           <li><a href="#merch">Merch</a></li>
           <li><a href="#contactus">ContactUs</a></li>
           

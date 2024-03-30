@@ -1,5 +1,5 @@
 
-# utilise packages to create a weather dashboard 
+
 # and carousel for graphics
 # need to add audio file too
 # setup package.json
