@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MerchImage from '../../../assets/images/Merch.png';
 import './Merchandise.css';
+import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function Merch() {
   // State to manage the visibility of the popup
@@ -16,30 +17,32 @@ function Merch() {
   };
 
   return (
-    <section id="merch">
-      <h1>Merch</h1>
-      <div className="merch-container">
-        {/* Make the image clickable and trigger the handleClick function */}
-        <figure onClick={handleClick} className="popup-trigger">
-          <img
-            src={MerchImage}
-            alt="Merch"
-            onMouseOver={(e) => e.target.style.transform = 'scale(1.03)'}
-            onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
-          />
-          <br></br>
-          <figcaption>Elite Hoops Club T-Shirts are now 50% off, grab them before they are gone.</figcaption>
-        </figure>
-      </div>
-      {/* Conditional rendering for the popup */}
-      {showPopup && (
-        <div className="popup-message">
-          <br></br>
-          <p>Congratulations! You've discovered the secret code.</p>
-          <p>Feel free to drop by our location and mention the code "Elite Hoops Club is Awesome" to receive a complimentary T-shirt from us.</p>
+    <ErrorBoundary > {/* errorBoundary added here */}
+      <section id="merch">
+        <h1>Merch</h1>
+        <div className="merch-container">
+          {/* Make the image clickable and trigger the handleClick function */}
+          <figure onClick={handleClick} className="popup-trigger">
+            <img
+              src={MerchImage}
+              alt="Merch"
+              onMouseOver={(e) => e.target.style.transform = 'scale(1.03)'}
+              onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
+            />
+            <br></br>
+            <figcaption>Elite Hoops Club T-Shirts are now 50% off, grab them before they are gone.</figcaption>
+          </figure>
         </div>
-      )}
-    </section>
+        {/* Conditional rendering for the popup */}
+        {showPopup && (
+          <div className="popup-message">
+            <br></br>
+            <p>Congratulations! You've discovered the secret code.</p>
+            <p>Feel free to drop by our location and mention the code "Elite Hoops Club is Awesome" to receive a complimentary T-shirt from us.</p>
+          </div>
+        )}
+      </section >
+    </ErrorBoundary> /* errorBoundary ends here */     
   );
 }
 

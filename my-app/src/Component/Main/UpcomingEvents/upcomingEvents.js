@@ -3,6 +3,7 @@ import DataTable from '../DataTable/dataTable';
 import eventsData from './eventsData.json';
 import SearchBar from '../searchBar/searchBar'; // Import the SearchBar component
 import '../DataTable/tableStyle.css';
+import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function Events() {
   const [filteredData, setFilteredData] = useState(eventsData);
@@ -19,6 +20,7 @@ function Events() {
   };
 
   return (
+        <ErrorBoundary> {/* errorBoundary added here */}
     <section id="events">
       <h1>Upcoming Events</h1>
       <SearchBar placeholder={"Search by Event Name and Date"} onSearch={handleSearch} />
@@ -27,7 +29,8 @@ function Events() {
         ) : (
           <p><strong>No events match your search criteria. Please try searching for a different event.</strong></p>
         )}
-    </section>
+      </section>
+      </ErrorBoundary> /* errorBoundary added here */
   );
 }
 

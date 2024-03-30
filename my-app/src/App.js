@@ -11,6 +11,7 @@ import News from './Component/Main/News/News';
 import Footer from './Component/Footer/Footer';
 import ScrollToTopButton from './Component/Main/ScrollToTop/ScrollToTop';
 import Search from './Component/Main/searchBar/searchBar';
+import errorBoundary from './Component/errorBoundary';
 
 function App() {
   return (

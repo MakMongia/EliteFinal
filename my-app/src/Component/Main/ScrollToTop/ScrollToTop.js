@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ScrollTopTop.css'; // Import the CSS file
+import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,13 +31,15 @@ function ScrollToTopButton() {
   };
 
   return (
-    <button
-      className={`scroll-to-top-button ${isVisible ? 'visible' : ''}`}
-      onClick={scrollToTop}
-      title="Go to top"
-    >
-      <i className="fas fa-chevron-up"></i> {/* Font Awesome up arrow icon */}
-    </button>
+    <ErrorBoundary> {/* errorBoundary added here */}
+      <button
+        className={`scroll-to-top-button ${isVisible ? 'visible' : ''}`}
+        onClick={scrollToTop}
+        title="Go to top"
+      >
+        <i className="fas fa-chevron-up"></i> {/* Font Awesome up arrow icon */}
+      </button>
+    </ErrorBoundary> /* errorBoundary ends here */
   );
 }
 

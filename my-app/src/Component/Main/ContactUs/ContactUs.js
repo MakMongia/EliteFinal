@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ContactUs.css'; // Import the CSS file
+import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function ContactUs() {
   // State variables to manage form data and validation
@@ -55,58 +56,60 @@ function ContactUs() {
   const filledFields = Object.values(formData).filter(value => value).length;
 
   return (
-    <section id="contactus" className='section-adjust'>
-      <h1>Contact Us</h1>
-      <div className="container">
-        <form id="contactForm" onSubmit={handleSubmit}>
-          <label htmlFor="name" className="hidden">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className={formErrors.name ? 'error' : ''}
-            placeholder="Name"
-            required
-          /><br /><br />
-          <label htmlFor="email" className="hidden">Email Address:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={formErrors.email ? 'error' : ''}
-            placeholder="Email Address"
-          /><br /><br />
-          <label htmlFor="message" className="hidden">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            value={formData.message}
-            onChange={handleChange}
-            className={formErrors.message ? 'error' : ''}
-            placeholder="Message"
-            required
-          ></textarea><br /><br />
-          <button type="submit" disabled={isSubmitDisabled}>Submit</button>
-        </form>
-        {/* Conditional rendering for the success popup */}
-        {showSuccessPopup && (
-          <div className="success-popup">
-            <p>Thank you for reaching out to us! We will get back to you as soon as possible.</p>
-          </div>
-        )}
-        {/* Conditional rendering for the validation message */}
-        {!showSuccessPopup && filledFields < 3 && (
-          <div className="validation-message">
-            {`Please fill ${3 - filledFields} more field${filledFields === 2 ? '' : 's'} to submit the form.`}
-          </div>
-        )}
-      </div>
-    </section>
+    <ErrorBoundary > {/* errorBoundary added here */}
+      <section id="contactus" className='section-adjust'>
+        <h1>Contact Us</h1>
+        <div className="container">
+          <form id="contactForm" onSubmit={handleSubmit}>
+            <label htmlFor="name" className="hidden">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className={formErrors.name ? 'error' : ''}
+              placeholder="Name"
+              required
+            /><br /><br />
+            <label htmlFor="email" className="hidden">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className={formErrors.email ? 'error' : ''}
+              placeholder="Email Address"
+            /><br /><br />
+            <label htmlFor="message" className="hidden">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              value={formData.message}
+              onChange={handleChange}
+              className={formErrors.message ? 'error' : ''}
+              placeholder="Message"
+              required
+            ></textarea><br /><br />
+            <button type="submit" disabled={isSubmitDisabled}>Submit</button>
+          </form>
+          {/* Conditional rendering for the success popup */}
+          {showSuccessPopup && (
+            <div className="success-popup">
+              <p>Thank you for reaching out to us! We will get back to you as soon as possible.</p>
+            </div>
+          )}
+          {/* Conditional rendering for the validation message */}
+          {!showSuccessPopup && filledFields < 3 && (
+            <div className="validation-message">
+              {`Please fill ${3 - filledFields} more field${filledFields === 2 ? '' : 's'} to submit the form.`}
+            </div>
+          )}
+        </div>
+      </section>
+    </ErrorBoundary> /* errorBoundary ends here */
   );
 }
 

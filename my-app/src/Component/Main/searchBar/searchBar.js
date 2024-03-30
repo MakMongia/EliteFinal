@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function SearchBar({ placeholder, onSearch }) {
   const [searchText, setSearchText] = useState('');
@@ -9,13 +10,15 @@ function SearchBar({ placeholder, onSearch }) {
   };
 
   return (
-    <input
-      type="text"
-      placeholder={placeholder}
-      value={searchText}
-      onChange={handleChange}
-      className="search-input"
-    />
+    <ErrorBoundary> {/* errorBoundary added here */}
+      <input
+        type="text"
+        placeholder={placeholder}
+        value={searchText}
+        onChange={handleChange}
+        className="search-input"
+      />
+    </ErrorBoundary> /* errorBoundary ends here */
   );
 }
 

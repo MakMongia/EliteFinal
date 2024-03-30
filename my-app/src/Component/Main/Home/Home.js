@@ -3,6 +3,7 @@ import Banner1 from '../../../assets/images/Banner1.png';
 import Banner2 from '../../../assets/images/Banner2.png';
 import Banner3 from '../../../assets/images/Banner3.png';
 import './Home.css';
+import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function Home() {
   // State to manage the current slide index
@@ -43,39 +44,41 @@ function Home() {
   };
 
   return (
-    <section id="home" className='section-margintop'>
-      {/* Carousel container */}
-      <div className="carousel-container">
-        {/* Carousel items */}
-        <div className="carousel-item">
-          <img src={Banner1} alt="Image1" />
+    <ErrorBoundary > {/* errorBoundary added here */}
+      <section id="home" className='section-margintop'>
+        {/* Carousel container */}
+        <div className="carousel-container">
+          {/* Carousel items */}
+          <div className="carousel-item">
+            <img src={Banner1} alt="Image1" />
+          </div>
+          <div className="carousel-item">
+            <img src={Banner2} alt="Image2" />
+          </div>
+          <div className="carousel-item">
+            <img src={Banner3} alt="Image3" />
+          </div>
         </div>
-        <div className="carousel-item">
-          <img src={Banner2} alt="Image2" />
+
+        {/* Dot buttons for carousel control */}
+        <div className="dot-buttons">
+          <button onClick={() => handleDotClick(0)} className={currentSlide === 0 ? 'active' : ''}></button>
+          <button onClick={() => handleDotClick(1)} className={currentSlide === 1 ? 'active' : ''}></button>
+          <button onClick={() => handleDotClick(2)} className={currentSlide === 2 ? 'active' : ''}></button>
         </div>
-        <div className="carousel-item">
-          <img src={Banner3} alt="Image3" />
-        </div>
-      </div>
 
-      {/* Dot buttons for carousel control */}
-      <div className="dot-buttons">
-        <button onClick={() => handleDotClick(0)} className={currentSlide === 0 ? 'active' : ''}></button>
-        <button onClick={() => handleDotClick(1)} className={currentSlide === 1 ? 'active' : ''}></button>
-        <button onClick={() => handleDotClick(2)} className={currentSlide === 2 ? 'active' : ''}></button>
-      </div>
+        {/* Previous button */}
+        <button id="prevBtn" onClick={prevSlide}>
+          <i className="fas fa-chevron-left"></i> {/* Font Awesome left arrow icon */}
+        </button>
 
-      {/* Previous button */}
-      <button id="prevBtn" onClick={prevSlide}>
-        <i className="fas fa-chevron-left"></i> {/* Font Awesome left arrow icon */}
-      </button>
-
-      {/* Next button */}
-      <button id="nextBtn" onClick={nextSlide}>
-        <i className="fas fa-chevron-right"></i> {/* Font Awesome right arrow icon */}
-      </button>
-    </section>
-  );
-}
+        {/* Next button */}
+        <button id="nextBtn" onClick={nextSlide}>
+          <i className="fas fa-chevron-right"></i> {/* Font Awesome right arrow icon */}
+        </button>
+      </section>
+    </ErrorBoundary> /* errorBoundary ends here */
+    );
+  }
 
 export default Home;

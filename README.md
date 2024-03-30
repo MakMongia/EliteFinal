@@ -1,5 +1,4 @@
 
-# settup error troubleshooting and create error boundaries
 # utilise packages to create a weather dashboard 
 # and carousel for graphics
 # need to add audio file too
