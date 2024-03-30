@@ -9,6 +9,7 @@ import ContactUs from './Component/Main/ContactUs/ContactUs';
 import Merch from './Component/Main/Merch/Merch'; 
 import News from './Component/Main/News/News';
 import Footer from './Component/Footer/Footer';
+import ScrollToTopButton from './Component/Main/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
@@ -22,8 +23,7 @@ function App() {
       <Merch />
       <ContactUs />
       <Footer />
-
-
+      <ScrollToTopButton />
     </div>
   );
 }
