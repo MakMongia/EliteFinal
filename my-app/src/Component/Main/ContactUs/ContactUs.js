@@ -20,7 +20,7 @@ function ContactUs() {
       isValid = false;
     }
 
-    if (!formData.email || !/^\S+@\S+\.\S+$/.test(formData.email)) {
+    if (formData.email && !/^\S+@\S+\.\S+$/.test(formData.email)) {
       errors.email = true;
       isValid = false;
     }
@@ -79,7 +79,6 @@ function ContactUs() {
             onChange={handleChange}
             className={formErrors.email ? 'error' : ''}
             placeholder="Email Address"
-            required
           /><br /><br />
           <label htmlFor="message" className="hidden">Message:</label>
           <textarea
