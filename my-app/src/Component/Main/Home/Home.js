@@ -28,10 +28,14 @@ function Home() {
 
   const handleDotClick = (index) => {
     setCurrentSlide(index);
+    // Scroll to the top of the section
+    const section = document.getElementById('home');
+    if (section) {
+      window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
+    }
   };
-
   return (
-    <section id="home" className="home-section">
+    <section id="home">
       <div className="carousel-container">
         <div className="carousel-item">
           <img src={Banner1} alt="Image1" />

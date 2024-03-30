@@ -55,7 +55,7 @@ function ContactUs() {
   const filledFields = Object.values(formData).filter(value => value).length;
 
   return (
-    <section id="contactus">
+    <section id="contactus" className='section-adjust'>
       <h1>Contact Us</h1>
       <div className="container">
         <form id="contactForm" onSubmit={handleSubmit}>

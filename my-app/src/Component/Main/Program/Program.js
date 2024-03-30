@@ -5,7 +5,7 @@ import Program2 from '../../../assets/images/Program2.jpg';
 
 function Programs() {
   return (
-    <section id="Program">
+    <section id="program">
       <h1>Programs</h1>
       
       <div className="program-container">

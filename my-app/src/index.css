@@ -38,7 +38,12 @@ h1, h2, nav img, nav a {
     align-items: center;
 }
 
+/* Add padding to the top of each section to offset the fixed header */
 section {
-  margin-bottom: 70px; /* margin for all the sections */
+  padding-top: 75px; /* Adjust as needed based on the height of your fixed header */
 }
 
+/* Compensate for the padding by using negative margins */
+.section-adjust {
+  margin-top: -75px; /* Adjust to match the padding-top value */
+}

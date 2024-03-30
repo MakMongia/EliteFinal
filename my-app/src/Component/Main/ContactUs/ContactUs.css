@@ -29,3 +29,6 @@ button {
   cursor: pointer;
 }
 
+.section-adjust {
+  margin-bottom: 100px; /* Adjust the margin bottom value as needed */
+}
