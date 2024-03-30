@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import Banner1 from '../../../assets/images/Banner1.png';
 import Banner2 from '../../../assets/images/Banner2.png';
 import Banner3 from '../../../assets/images/Banner3.png';
@@ -6,79 +9,71 @@ import './Home.css';
 import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function Home() {
-  // State to manage the current slide index
   const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef(null);
 
-  // Function to show the selected slide
-  const showSlide = (index) => {
-    // Get all carousel items and show the one matching the index, hide others
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    carouselItems.forEach((item, i) => {
-      item.style.display = i === index ? 'block' : 'none';
-    });
+  const settings = {
+    dots: false, // We will handle dots manually
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: currentSlide,
+    afterChange: (index) => setCurrentSlide(index),
   };
 
-  // Function to display the next slide
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === 2 ? 0 : prevSlide + 1));
-  };
-
-  // Function to display the previous slide
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === 0 ? 2 : prevSlide - 1));
-  };
-
-  // Effect to update slide display when currentSlide changes
-  useEffect(() => {
-    showSlide(currentSlide);
-  }, [currentSlide]);
-
-  // Function to handle dot button click and scroll to top of the section
-  const handleDotClick = (index) => {
+  const handleIndicatorClick = (index) => {
     setCurrentSlide(index);
-    // Scroll to the top of the section
-    const section = document.getElementById('home');
-    if (section) {
-      window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
-    }
+    sliderRef.current.slickGoTo(index); // Go to the selected slide
+  };
+
+  const goToPrevSlide = () => {
+    const prevSlide = currentSlide === 0 ? 2 : currentSlide - 1;
+    setCurrentSlide(prevSlide);
+    sliderRef.current.slickGoTo(prevSlide); // Go to the previous slide
+  };
+
+  const goToNextSlide = () => {
+    const nextSlide = currentSlide === 2 ? 0 : currentSlide + 1;
+    setCurrentSlide(nextSlide);
+    sliderRef.current.slickGoTo(nextSlide); // Go to the next slide
   };
 
   return (
-    <ErrorBoundary > {/* errorBoundary added here */}
-      <section id="home" className='section-margintop'>
-        {/* Carousel container */}
-        <div className="carousel-container">
-          {/* Carousel items */}
-          <div className="carousel-item">
-            <img src={Banner1} alt="Image1" />
-          </div>
-          <div className="carousel-item">
-            <img src={Banner2} alt="Image2" />
-          </div>
-          <div className="carousel-item">
-            <img src={Banner3} alt="Image3" />
-          </div>
+    <ErrorBoundary>
+      <section id="home" className="section-margintop">
+        <div className="carousel-wrapper">
+          <Slider {...settings} ref={sliderRef}>
+            <div className="carousel-item">
+              <img src={Banner1} alt="Image1" />
+            </div>
+            <div className="carousel-item">
+              <img src={Banner2} alt="Image2" />
+            </div>
+            <div className="carousel-item">
+              <img src={Banner3} alt="Image3" />
+            </div>
+          </Slider>
+          <button id="prevBtn" className="prev" onClick={goToPrevSlide}>
+            &#10094;
+          </button>
+          <button id="nextBtn" className="next" onClick={goToNextSlide}>
+            &#10095;
+          </button>
         </div>
 
-        {/* Dot buttons for carousel control */}
-        <div className="dot-buttons">
-          <button onClick={() => handleDotClick(0)} className={currentSlide === 0 ? 'active' : ''}></button>
-          <button onClick={() => handleDotClick(1)} className={currentSlide === 1 ? 'active' : ''}></button>
-          <button onClick={() => handleDotClick(2)} className={currentSlide === 2 ? 'active' : ''}></button>
+        <div className="indicators">
+          {[...Array(3)].map((_, index) => (
+            <div
+              key={index}
+              className={`indicator ${currentSlide === index ? 'active' : ''}`}
+              onClick={() => handleIndicatorClick(index)}
+            ></div>
+          ))}
         </div>
-
-        {/* Previous button */}
-        <button id="prevBtn" onClick={prevSlide}>
-          <i className="fas fa-chevron-left"></i> {/* Font Awesome left arrow icon */}
-        </button>
-
-        {/* Next button */}
-        <button id="nextBtn" onClick={nextSlide}>
-          <i className="fas fa-chevron-right"></i> {/* Font Awesome right arrow icon */}
-        </button>
       </section>
-    </ErrorBoundary> /* errorBoundary ends here */
-    );
-  }
+    </ErrorBoundary>
+  );
+}
 
 export default Home;

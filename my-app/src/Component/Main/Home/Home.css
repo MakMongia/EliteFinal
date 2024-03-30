@@ -33,7 +33,7 @@
 #prevBtn,
 #nextBtn {
   position: absolute; /* Position relative to the carousel container */
-  top: 60%; /* Position vertically at 60% from the top */
+  top: 50%; /* Position vertically at 50% from the top */
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   color: white; /* Text color */
   padding: 10px; /* Padding around the buttons */
@@ -54,13 +54,13 @@
 }
 
 /* Styles for dot buttons */
-.dot-buttons {
+.indicators {
   text-align: center; /* Center-align dot buttons */
   margin-top: 10px; /* Add top margin */
 }
 
 /* Styles for individual dot buttons */
-.dot-buttons button {
+.indicators .indicator {
   background-color: #00000038; /* Semi-transparent black background */
   border: none; /* No border */
   cursor: pointer; /* Cursor type */
@@ -68,14 +68,12 @@
   width: 10px; /* Width of dot buttons */
   margin: 0 5px; /* Margin between dot buttons */
   padding: 0; /* No padding */
+  display: inline-block; /* Display dot buttons in a row */
+  border-radius: 50%; /* Make dots circular */
   transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
 /* Styles for active dot button */
-.dot-buttons button.active {
+.indicators .indicator.active {
   background-color: #d8730ed3; /* Semi-transparent color for active dot button */
-}
-/* Compensate for the padding by using negative margins */
-.section-margintop {
-  margin-top: -45px; /* Adjust to match the padding-top value */
 }
