@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ScrollTopTop.css';
+import './ScrollTopTop.css'; // Import the CSS file
 
 function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,6 +21,7 @@ function ScrollToTopButton() {
     };
   }, []);
 
+  // Function to scroll to the top of the document smoothly
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -34,7 +35,7 @@ function ScrollToTopButton() {
       onClick={scrollToTop}
       title="Go to top"
     >
-      <i className="fas fa-chevron-up"></i>
+      <i className="fas fa-chevron-up"></i> {/* Font Awesome up arrow icon */}
     </button>
   );
 }

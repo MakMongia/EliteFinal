@@ -5,37 +5,36 @@
 
 /* General Settings */
 body {
-    background-color: #eaeaea; 
-    color: #000; 
-    height: 1500px;
+    background-color: #eaeaea; /* Set the background color */
+    color: #000; /* Set the text color */
+    height: 1500px; /* Set a fixed height for demonstration */
 }
 
 h1 {
-    font-size: 32px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 32px; /* Set the font size for h1 */
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans font */
+    font-weight: bold; /* Set font weight to bold */
+    margin-bottom: 20px; /* Add bottom margin */
 }
 
 h2 {
-    font-size: 20px; 
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-
+    font-size: 20px; /* Set the font size for h2 */
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans font */
+    font-weight: bold; /* Set font weight to bold */
 }
 
 p {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', sans-serif; /* Use Quicksand font for paragraphs */
 }
 
 nav a {
-    font-family: 'Lato', sans-serif; 
+    font-family: 'Lato', sans-serif; /* Use Lato font for navigation links */
 }
 
 /* Adjust the vertical alignment for headings, icons, and links */
 h1, h2, nav img, nav a {
-    vertical-align: middle;
-    align-items: center;
+    vertical-align: middle; /* Align items vertically */
+    align-items: center; /* Align items using flexbox */
 }
 
 /* Add padding to the top of each section to offset the fixed header */

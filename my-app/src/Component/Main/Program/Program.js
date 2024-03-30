@@ -15,7 +15,7 @@ function Programs() {
         </div>
         
         <div className="program-image">
-          <img src={Program1} alt="Program1" />
+          <img src={Program1} alt="Season Kick-off Tournament" />
         </div>
       </div>
       
@@ -26,7 +26,7 @@ function Programs() {
         </div>
         
         <div className="program-image">
-          <img src={Program2} alt="Program2" />
+          <img src={Program2} alt="Basketball Camps" />
         </div>
       </div>
     </section>

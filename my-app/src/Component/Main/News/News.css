@@ -1,22 +1,23 @@
 /* News.css */
 
-
+/* Styles for the video container */
 .video-container {
-  margin-top: 20px;
-  position: relative;
-  width: 100%;
-  max-width: 560px;
-  margin: 0 auto;
+  margin-top: 20px; /* Add margin spacing on the top */
+  position: relative; /* Positioning relative to control child elements */
+  width: 100%; /* Occupy full width of the container */
+  max-width: 560px; /* Limit the maximum width to prevent excessive stretching */
+  margin: 0 auto; /* Center the container horizontally */
 }
 
+/* Styles for video and iframe elements within the video container */
 .video-container iframe,
 .video-container video {
-  width: 100%;
-  height: 315px;
-  margin-top: 20px;
+  width: 100%; /* Occupy full width of the container */
+  height: 315px; /* Set fixed height for video */
+  margin-top: 20px; /* Add spacing on the top */
 }
 
+/* Styles for the video description */
 .video-description {
-  margin-top: 15px;
+  margin-top: 15px; /* Add spacing on the top */
 }
-

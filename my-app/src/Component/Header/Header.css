@@ -1,55 +1,60 @@
 /* Navbar styles */
 #navbar {
-  background-color: #000;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  padding-top: 0.1px;
-  padding-bottom: 0.1px;
-  left :0;
-  right: 0;
+  background-color: #000; /* Background color */
+  position: fixed; /* Fixed position */
+  width: 100%; /* Full width */
+  top: 0; /* Top position */
+  z-index: 1000; /* Z-index */
+  padding-top: 0.1px; /* Padding top */
+  padding-bottom: 0.1px; /* Padding bottom */
+  left: 0; /* Left position */
+  right: 0; /* Right position */
 }
 
+/* List styles */
 #navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 20px; /* Add left padding to the navbar */
-  padding-right: 10px; /* Add right padding to the navbar */
+  list-style: none; /* Remove default list style */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+  padding-left: 20px; /* Left padding */
+  padding-right: 10px; /* Right padding */
 }
 
+/* List item styles */
 #navbar ul li {
-  margin-right: 20px;
+  margin-right: 20px; /* Margin between items */
 }
 
+/* Last list item style */
 #navbar ul li:last-child {
-  margin-right: 0;
+  margin-right: 0; /* No margin for the last item */
 }
 
+/* Link styles */
 #navbar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size */
 }
 
+/* Hover styles for links */
 #navbar ul li a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
 }
 
-/* Ensure the logo stays within the navbar */
+/* Logo style */
 #navbar ul li img {
-  max-width: 100px; /* Limit the logo's maximum width */
-  height: auto;
+  max-width: 100px; /* Maximum width for the logo */
+  height: auto; /* Automatic height */
 }
 
 /* Header styles */
 .fixed-header {
-  padding: 0;
-  margin: 0;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
 }
 
 /* Add padding to the body to offset the fixed header */

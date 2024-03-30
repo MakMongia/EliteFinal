@@ -102,7 +102,7 @@ function ContactUs() {
         {/* Conditional rendering for the validation message */}
         {!showSuccessPopup && filledFields < 3 && (
           <div className="validation-message">
-            {`Please fill ${3 - filledFields} more field(s) to submit the form.`}
+            {`Please fill ${3 - filledFields} more field${filledFields === 2 ? '' : 's'} to submit the form.`}
           </div>
         )}
       </div>

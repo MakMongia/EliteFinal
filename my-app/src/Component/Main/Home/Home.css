@@ -1,68 +1,77 @@
-
+/* Styles for the carousel wrapper */
 .carousel-wrapper {
-  position: relative;
+  position: relative; /* Ensure relative positioning for child elements */
 }
 
+/* Styles for the carousel container */
 .carousel-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+  width: 100%; /* Take up the full width */
+  overflow: hidden; /* Hide overflow content */
+  position: relative; /* Maintain relative positioning for children */
 }
 
+/* Styles for each carousel item */
 .carousel-item {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%; /* Take up the full width */
+  height: 100%; /* Take up the full height */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
   position: relative; /* Ensure relative positioning for absolutely positioned buttons */
 }
 
+/* Styles for images within carousel items */
 .carousel-item img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure images don't exceed container width */
+  max-height: 100%; /* Ensure images don't exceed container height */
+  object-fit: contain; /* Maintain aspect ratio while fitting within container */
 }
 
+/* Styles for previous and next buttons */
 #prevBtn,
 #nextBtn {
-  position: absolute;
-  top: 60%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  border: none;
-  z-index: 1;
-  transform: translateY(-50%); /* Adjust to vertically center the buttons */
+  position: absolute; /* Position relative to the carousel container */
+  top: 60%; /* Position vertically at 60% from the top */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: white; /* Text color */
+  padding: 10px; /* Padding around the buttons */
+  cursor: pointer; /* Cursor type */
+  border: none; /* No border */
+  z-index: 1; /* Ensure buttons appear above other elements */
+  transform: translateY(-50%); /* Vertically center the buttons */
 }
 
+/* Styles for the previous button */
 #prevBtn {
-  left: 10px; /* Adjust as needed */
+  left: 10px; /* Position 10px from the left */
 }
 
+/* Styles for the next button */
 #nextBtn {
-  right: 10px; /* Adjust as needed */
+  right: 10px; /* Position 10px from the right */
 }
 
+/* Styles for dot buttons */
 .dot-buttons {
-  text-align: center;
-  margin-top: 10px; /* Adjust as needed */
+  text-align: center; /* Center-align dot buttons */
+  margin-top: 10px; /* Add top margin */
 }
 
+/* Styles for individual dot buttons */
 .dot-buttons button {
-  background-color: #00000038;
-  border: none;
-  cursor: pointer;
-  height: 10px; /* Adjust as needed */
-  width: 10px; /* Adjust as needed */
-  margin: 0 5px; /* Adjust as needed */
-  padding: 0;
-  transition: background-color 0.3s;
+  background-color: #00000038; /* Semi-transparent black background */
+  border: none; /* No border */
+  cursor: pointer; /* Cursor type */
+  height: 10px; /* Height of dot buttons */
+  width: 10px; /* Width of dot buttons */
+  margin: 0 5px; /* Margin between dot buttons */
+  padding: 0; /* No padding */
+  transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
+/* Styles for active dot button */
 .dot-buttons button.active {
-  background-color: #d8730ed3; /* Adjust as needed */
+  background-color: #d8730ed3; /* Semi-transparent color for active dot button */
 }

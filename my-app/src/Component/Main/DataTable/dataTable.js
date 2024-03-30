@@ -1,7 +1,7 @@
 import React from 'react';
-import './tableStyle.css';
+import './tableStyle.css';// Import the CSS file for styling the table
 
-function DataTable({ data }) {
+function DataTable({ data }) { // Import date from JSON to display on the table
   return (
     <table className="table">
       <thead>

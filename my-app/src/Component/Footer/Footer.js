@@ -5,8 +5,12 @@ import logo from '../../assets/images/Logo.png'; // Import your logo image
 function Footer() {
   return (
     <footer className="footer">
+      {/* Container for links and logo */}
       <div className="links-container">
+        {/* Logo */}
         <img src={logo} alt="Logo" className="footer-logo" />
+
+        {/* Footer links */}
         <div className="footer-list">
           <ul>
             <li><span className="footer-link" onClick={() => window.location.href = "#home"}>Home</span></li>
@@ -22,6 +26,8 @@ function Footer() {
             <li><span className="footer-link" onClick={() => window.location.href = "#contactus"}>Contact Us</span></li>
           </ul>
         </div>
+
+        {/* Contact information */}
         <div className="contact-info">
           <p>Elite Hoops Club</p>
           <p>15 Springvale Drive</p>
@@ -30,6 +36,8 @@ function Footer() {
           <p>email - info@Elitehc.com.au</p>
         </div>
       </div>
+
+      {/* Policies section */}
       <div className="policies">
         <span>Privacy Policy</span>
         <span>Terms & Conditions</span>

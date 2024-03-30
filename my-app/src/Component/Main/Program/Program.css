@@ -1,26 +1,31 @@
 /* Programs.css */
 
+/* Adjust margin-top for the Programs section */
 #Program {
   margin-top: 20px;
 }
 
+/* Container for program elements */
 .program-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+/* Content area for program details */
 .program-content {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 20px; /* Add margin between program content and image */
 }
 
+/* Image area for program visuals */
 .program-image {
   flex: 1;
 }
 
+/* Styling for images within program visuals */
 .program-image img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+  max-width: 100%; /* Ensure images don't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Add space between images */
 }
