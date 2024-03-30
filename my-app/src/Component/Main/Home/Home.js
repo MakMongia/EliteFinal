@@ -26,6 +26,10 @@ function Home() {
     showSlide(currentSlide);
   }, [currentSlide]);
 
+  const handleDotClick = (index) => {
+    setCurrentSlide(index);
+  };
+
   return (
     <section id="home" className="home-section">
       <div className="carousel-container">
@@ -38,6 +42,13 @@ function Home() {
         <div className="carousel-item">
           <img src={Banner3} alt="Image3" />
         </div>
+      </div>
+
+      {/* Dot buttons for carousel control */}
+      <div className="dot-buttons">
+        <button onClick={() => handleDotClick(0)} className={currentSlide === 0 ? 'active' : ''}></button>
+        <button onClick={() => handleDotClick(1)} className={currentSlide === 1 ? 'active' : ''}></button>
+        <button onClick={() => handleDotClick(2)} className={currentSlide === 2 ? 'active' : ''}></button>
       </div>
 
       <button id="prevBtn" onClick={prevSlide}>

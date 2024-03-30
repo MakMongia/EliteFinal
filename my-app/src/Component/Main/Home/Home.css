@@ -49,3 +49,23 @@
 #nextBtn {
   right: 10px; /* Adjust as needed */
 }
+
+.dot-buttons {
+  text-align: center;
+  margin-top: 10px; /* Adjust as needed */
+}
+
+.dot-buttons button {
+  background-color: #00000038;
+  border: none;
+  cursor: pointer;
+  height: 10px; /* Adjust as needed */
+  width: 10px; /* Adjust as needed */
+  margin: 0 5px; /* Adjust as needed */
+  padding: 0;
+  transition: background-color 0.3s;
+}
+
+.dot-buttons button.active {
+  background-color: #d8730ed3; /* Adjust as needed */
+}

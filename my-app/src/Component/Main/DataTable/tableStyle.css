@@ -2,6 +2,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a card-like effect */
 }
 
 .table th,
@@ -22,3 +23,4 @@
 .table tbody tr:hover {
   background-color: #ddd;
 }
+
