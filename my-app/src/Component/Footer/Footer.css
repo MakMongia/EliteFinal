@@ -10,40 +10,33 @@
 /* Styles for the container holding the links */
 .links-container {
   display: flex;
-  justify-content: center; /* Align links horizontally */
+  justify-content: space-between; /* Adjusted to spread items across */
+  align-items: flex-start; /* Align items to the top */
 }
 
-/* Styles for each row of links */
-.links-row {
-  display: flex;
-  justify-content: space-between; /* Spread links evenly across the row */
-  margin-bottom: 10px; /* Add space between rows */
+/* Styles for each list */
+.footer-list {
+  margin-right: 20px; /* Add space between lists */
+  margin-left: 20px; /* Add space between lists */
+}
+/* Styles for the list items */
+.footer-list li {
+  margin-bottom: 10px; /* Add space between list items */
 }
 
 /* Styles for the contact information */
-.contact-info p {
-  margin: 5px 0; /* Add space around each contact info item */
-}
-
-/* Styles for the footer content section */
-.footer-content {
-  display: flex;
-  justify-content: space-between; /* Spread content evenly */
-  align-items: center; /* Center items vertically */
+.contact-info {
+  margin-left: 20px; /* Add space between the last list and contact info */
 }
 
 /* Styles for the footer logo */
 .footer-logo {
   width: 200px; /* Adjust the width as needed */
-}
-
-/* Styles for the policies section */
-.policies {
-  text-align: center; /* Center-align policy links */
+  margin-top: -10px; /* Move the logo up slightly */
 }
 
 /* Styles for all footer links */
-.footer-link, .policies span {
+.footer-link, span {
   font-weight: bold; /* Make the links bold */
   text-decoration: none; /* Remove default underline */
   cursor: pointer; /* Change cursor to pointer on hover */
@@ -51,11 +44,12 @@
 }
 
 /* Hover styles for footer links and policy links */
-.footer-link:hover, .policies span:hover {
+.footer-link:hover span:hover {
   text-decoration: underline; /* Underline the links on hover */
 }
 
 /* Set link color for policy links */
 .policies span {
   color: #333;
+  text-align: center; /* Center-align the spans */
 }

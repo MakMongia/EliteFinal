@@ -6,22 +6,22 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="links-container">
-        <div className="links-row">
-          <span className="footer-link" onClick={() => window.location.href = "#home"}>Home</span>
-          <span className="footer-link" onClick={() => window.location.href = "#schedule"}>Schedule</span>
-          <span className="footer-link" onClick={() => window.location.href = "#program"}>Programs</span>
-        </div>
-        <div className="links-row">
-          <span className="footer-link" onClick={() => window.location.href = "#events"}>Events</span>
-          <span className="footer-link" onClick={() => window.location.href = "#news"}>News</span>
-          <span className="footer-link" onClick={() => window.location.href = "#merch"}>Merch</span>
-        </div>
-        <div className="links-row">
-          <span className="footer-link" onClick={() => window.location.href = "#contactus"}>ContactUs</span>
-        </div>
-      </div>
-      <div className="footer-content">
         <img src={logo} alt="Logo" className="footer-logo" />
+        <div className="footer-list">
+          <ul>
+            <li><span className="footer-link" onClick={() => window.location.href = "#home"}>Home</span></li>
+            <li><span className="footer-link" onClick={() => window.location.href = "#schedule"}>Schedule</span></li>
+            <li><span className="footer-link" onClick={() => window.location.href = "#program"}>Programs</span></li>
+          </ul>
+        </div>
+        <div className="footer-list">
+          <ul>
+            <li><span className="footer-link" onClick={() => window.location.href = "#events"}>Events</span></li>
+            <li><span className="footer-link" onClick={() => window.location.href = "#news"}>News</span></li>
+            <li><span className="footer-link" onClick={() => window.location.href = "#merch"}>Merch</span></li>
+            <li><span className="footer-link" onClick={() => window.location.href = "#contactus"}>Contact Us</span></li>
+          </ul>
+        </div>
         <div className="contact-info">
           <p>Elite Hoops Club</p>
           <p>15 Springvale Drive</p>
@@ -31,10 +31,13 @@ function Footer() {
         </div>
       </div>
       <div className="policies">
-       <span className="footer-link">Privacy Statement</span>
-       <span className="footer-link">Terms and Conditions</span>
+        <span className="footer-link">Privacy Policy</span>
+        <span className="footer-link">Terms & Conditions</span>
+        <span className="footer-link">Cookies Policy</span>
+        <span className="footer-link">Whistleblowing</span>
+        <span className="footer-link">Human Rights & Prevention of Modern Slavery</span>
+        <span className="footer-link">Customer Support</span>
       </div>
-
     </footer>
   );
 }
