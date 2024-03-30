@@ -11,14 +11,14 @@
 .links-container {
   display: flex;
   justify-content: space-between; /* Adjusted to spread items across */
-  align-items: flex-start; /* Align items to the top */
+  align-items: center; /* Align items vertically */
 }
 
 /* Styles for each list */
 .footer-list {
   margin-right: 20px; /* Add space between lists */
-  margin-left: 20px; /* Add space between lists */
 }
+
 /* Styles for the list items */
 .footer-list li {
   margin-bottom: 10px; /* Add space between list items */
@@ -32,7 +32,7 @@
 /* Styles for the footer logo */
 .footer-logo {
   width: 200px; /* Adjust the width as needed */
-  margin-top: -30px; /* Move the logo up slightly */
+  margin-top: -20px; /* Move the logo up slightly */
 }
 
 /* Styles for all footer links */
@@ -44,15 +44,27 @@
   margin-right: 20px; /* Add space between links */
 }
 
+.policies span{
+  text-decoration: none; /* Remove default underline */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-right: 20px; /* Add space between links */
+}
+
+
 /* Hover styles for footer links and policy links */
-.footer-link:hover{
+.footer-link:hover {
   text-decoration: underline; /* Underline the links on hover */
 }
 
 /* Set link color for policy links */
+.policies {
+  display: flex; /* Make policies a flex container */
+  justify-content: center; /* Center-align policy links */
+  gap: 20px; /* Add equal space between policy links */
+}
+
 .policies span {
   color: #333;
-  text-align: center; /* Center-align the spans */
 }
 
 /* Reduce space between paragraphs in contact info */

@@ -31,12 +31,12 @@ function Footer() {
         </div>
       </div>
       <div className="policies">
-        <span className="footer-link">Privacy Policy</span>
-        <span className="footer-link">Terms & Conditions</span>
-        <span className="footer-link">Cookies Policy</span>
-        <span className="footer-link">Whistleblowing</span>
-        <span className="footer-link">Human Rights & Prevention of Modern Slavery</span>
-        <span className="footer-link">Customer Support</span>
+        <span>Privacy Policy</span>
+        <span>Terms & Conditions</span>
+        <span>Cookies Policy</span>
+        <span>Whistleblowing</span>
+        <span>Human Rights & Prevention of Modern Slavery</span>
+        <span>Customer Support</span>
       </div>
     </footer>
   );
