@@ -52,3 +52,9 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
+
+.popup-message {
+  text-align: center;
+  font-weight: bold;
+  color: black; /* Darker color for better contrast */
+}

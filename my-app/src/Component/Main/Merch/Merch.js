@@ -30,14 +30,14 @@ function Merch() {
           <br></br>
           <figcaption>Elite Hoops Club T-Shirts are now 50% off, grab them before they are gone.</figcaption>
         </figure>
-        {/* Conditional rendering for the popup */}
-        {showPopup && (
-          <div className="popup">
-            <p>Good Job! You found the secret code.</p>
-            <p>Please visit us on site and tell them this code "Elite Hoops is Awesome" to get a free T-Shirt on us</p>
-          </div>
-        )}
       </div>
+      {/* Conditional rendering for the popup */}
+      {showPopup && (
+        <div className="popup-message">
+          <p>Good Job! You found the secret code.</p>
+          <p>Please visit us on site and tell them this code "Elite Hoops is Awesome" to get a free T-Shirt on us.</p>
+        </div>
+      )}
     </section>
   );
 }
