@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Banner1 from '../../../assets/images/Banner1.png';
 import Banner2 from '../../../assets/images/Banner2.png';
 import Banner3 from '../../../assets/images/Banner3.png';
-import './Home.css';
+import './Home.css'; // Import the external CSS file for other styles
 import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function Home() {

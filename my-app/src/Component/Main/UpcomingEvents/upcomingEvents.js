@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import DataTable from '../DataTable/dataTable';
 import eventsData from './eventsData.json';
 import SearchBar from '../searchBar/searchBar'; // Import the SearchBar component
-import '../DataTable/tableStyle.css';
 import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function Events() {
