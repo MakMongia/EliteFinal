@@ -1,5 +1,3 @@
-
-# setup package.json
 # deploy to github server with live link????
 
 
