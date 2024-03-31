@@ -1,74 +1,109 @@
-/* Header styles */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #000;
+/* Navbar styles */
+#navbar {
+  background-color: #000; /* Background color */
+  position: fixed; /* Fixed position */
+  width: 100%; /* Full width */
+  top: 0; /* Top position */
+  z-index: 1000; /* Z-index */
+  padding-top: 0.1px; /* Padding top */
+  padding-bottom: 0.1px; /* Padding bottom */
+  left: 0; /* Left position */
+  right: 0; /* Right position */
 }
 
-/* Navigation bar styles */
+/* List styles */
 #navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
+  list-style: none; /* Remove default list style */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+  padding-left: 20px; /* Left padding */
+  padding-right: 10px; /* Right padding */
 }
 
 /* List item styles */
 #navbar ul li {
-  margin-right: 20px;
+  margin-right: 20px; /* Margin between items */
 }
 
-/* Search button styles */
-.search-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: white;
+/* Last list item style */
+#navbar ul li:last-child {
+  margin-right: 0; /* No margin for the last item */
+}
+
+/* Link styles */
+#navbar ul li a {
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size */
+}
+
+/* Hover styles for links */
+#navbar ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Logo style */
+#navbar ul li img {
+  max-width: 100px; /* Maximum width for the logo */
+  height: auto; /* Automatic height */
 }
 
 /* Search bar styles */
 .search-bar {
-  position: relative;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
 }
 
 .search-bar form {
-  display: flex;
-  align-items: center;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
 }
 
 .search-bar input[type="text"] {
-  width: 200px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
+  width: 150px; /* Width of the input field */
+  padding: 8px; /* Padding */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 5px; /* Border radius */
+  outline: none; /* Remove outline */
+  margin-right: 10px; /* Margin between input and button */
 }
 
 .search-bar button[type="submit"] {
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 8px 16px; /* Padding */
+  background-color: #007bff; /* Background color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Border radius */
+  cursor: pointer; /* Cursor type */
 }
 
 /* Close button styles */
 .close-button {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   color: #ccc;
 }
 
 .close-button:hover {
-  color: #000;
+  color: #cccccca7;
+}
+
+/* Search button styles */
+.search-button {
+  background: none; /* Transparent background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Cursor type */
+  color: white; /* Text color */
+  font-size: 16px; /* Adjust font size */
+}
+
+/* Styling for search icon */
+.search-button::before {
+  content: "\f002"; /* Unicode for the search icon in Font Awesome */
+  font-family: "Font Awesome 5 Free"; /* Font family for Font Awesome */
 }

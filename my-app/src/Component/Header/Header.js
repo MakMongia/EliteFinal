@@ -1,27 +1,29 @@
-import React, { useState } from 'react'; // Import React at the beginning
-import logo from '../../assets/images/Logo.png'; // Import the logo image
-import './Header.css'; // Import the CSS file
-import SearchBar from '../Main/searchBar/searchBar'; // Import the SearchBar component
+// Header.js
+import React, { useState } from 'react';
+import logo from '../../assets/images/Logo.png';
+import './Header.css';
+import SearchBar from '../Main/searchBar/searchBar'; // Assuming SearchBar.js is in the same directory
 
 function Header() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false); // State to manage search bar visibility
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const toggleSearch = () => {
-    setIsSearchOpen(!isSearchOpen); // Toggle search bar visibility
+    setIsSearchOpen(!isSearchOpen);
+  };
+
+  const handleCloseSearch = () => {
+    setIsSearchOpen(false);
   };
 
   const handleSearch = (searchText) => {
-    // Add your search logic here
+    // Implement your search logic here
     console.log("Searching for:", searchText);
   };
 
   return (
     <header>
-      {/* Navigation bar */}
       <nav id="navbar">
         <ul>
-          {/* List items */}
-          {/* Logo */}
           <li><img src={logo} alt="Logo" /></li>
           <li><a href="#home">Home</a></li>
           <li><a href="#schedule">Schedule</a></li>
@@ -31,22 +33,17 @@ function Header() {
           <li><a href="#weather">Weather</a></li>
           <li><a href="#merch">Merch</a></li>
           <li><a href="#contactus">ContactUs</a></li>
+          <li>
+            {isSearchOpen ? (
+              <SearchBar onClose={handleCloseSearch} onSearch={handleSearch} />
+            ) : (
+              <button className="search-button" onClick={toggleSearch}>
+                Search
+              </button>
+            )}
+          </li>
         </ul>
-        {/* Search button */}
-        <button className="search-button" onClick={toggleSearch}>
-          <i className="fas fa-search"></i>
-        </button>
       </nav>
-
-      {/* Search bar */}
-      {isSearchOpen && (
-        <SearchBar onClose={toggleSearch} onSearch={handleSearch} />
-      )}
-
-      {/* Overlay for closing search bar */}
-      {isSearchOpen && (
-        <div className="search-overlay" onClick={toggleSearch}></div>
-      )}
     </header>
   );
 }
