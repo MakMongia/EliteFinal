@@ -1,10 +1,15 @@
-import React from 'react';
+// News.js
+import React, { useRef } from 'react';
 import myVideo from '../../../assets/other-assets/Video1.mp4';
 import myAudio from '../../../assets/other-assets/Audio.mp3';
 import './News.css'; // Import the CSS file
 import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
+import Transcript from '../Transcript/Transcript';
+import transcriptText from '../Transcript/transcriptData'; // Import the transcript text
 
 function News() {
+  const audioRef = useRef(null);
+
   return (
     <ErrorBoundary>
       {/* errorBoundary added here */}
@@ -41,14 +46,18 @@ function News() {
 
         {/* Audio container */}
         <div className="audio-container">
-          <audio controls autoPlay>
+          <audio controls autoPlay ref={audioRef}>
             <source src={myAudio} type="audio/mpeg" />
             Your browser does not support the audio tag.
           </audio>
           {/* Description for the audio */}
           <p className="audio-description">
-            Enjoy this motivational audio speech given by our CEO.
+            Enjoy this motivational speech given by our CEO.
           </p>
+          <Transcript
+            text={transcriptText} // Pass the imported transcript text
+            audioRef={audioRef}
+          />
         </div>
       </section>
     </ErrorBoundary> /* errorBoundary ends here */

@@ -1,0 +1,18 @@
+/* Transcript.css */
+
+.transcript {
+  background-color: white; /* Set background color for the transcript container */
+  padding: 20px; /* Add some padding for better readability */
+  border-radius: 5px; /* Add rounded corners to the container */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.transcript p {
+  margin: 10px 0; /* Add some vertical spacing between each paragraph */
+  line-height: 1.5; /* Increase line height for better readability */
+}
+
+.highlighted {
+  background-color: rgba(17, 0, 255, 0.2); /* Example highlighting style with transparency */
+  /* You can adjust the transparency or choose a different color as needed */
+}
