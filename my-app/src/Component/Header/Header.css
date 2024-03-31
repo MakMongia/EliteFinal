@@ -1,63 +1,74 @@
-/* Navbar styles */
-#navbar {
-  background-color: #000; /* Background color */
-  position: fixed; /* Fixed position */
-  width: 100%; /* Full width */
-  top: 0; /* Top position */
-  z-index: 1000; /* Z-index */
-  padding-top: 0.1px; /* Padding top */
-  padding-bottom: 0.1px; /* Padding bottom */
-  left: 0; /* Left position */
-  right: 0; /* Right position */
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000;
 }
 
-/* List styles */
+/* Navigation bar styles */
 #navbar ul {
-  list-style: none; /* Remove default list style */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  display: flex; /* Use flexbox */
-  justify-content: space-between; /* Space items evenly */
-  align-items: center; /* Center items vertically */
-  padding-left: 20px; /* Left padding */
-  padding-right: 10px; /* Right padding */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 /* List item styles */
 #navbar ul li {
-  margin-right: 20px; /* Margin between items */
+  margin-right: 20px;
 }
 
-/* Last list item style */
-#navbar ul li:last-child {
-  margin-right: 0; /* No margin for the last item */
+/* Search button styles */
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
 }
 
-/* Link styles */
-#navbar ul li a {
-  color: white; /* Text color */
-  text-decoration: none; /* Remove underline */
-  font-size: 16px; /* Font size */
+/* Search bar styles */
+.search-bar {
+  position: relative;
 }
 
-/* Hover styles for links */
-#navbar ul li a:hover {
-  text-decoration: underline; /* Underline on hover */
+.search-bar form {
+  display: flex;
+  align-items: center;
 }
 
-/* Logo style */
-#navbar ul li img {
-  max-width: 100px; /* Maximum width for the logo */
-  height: auto; /* Automatic height */
+.search-bar input[type="text"] {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
 }
 
-/* Header styles */
-.fixed-header {
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
+.search-bar button[type="submit"] {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Add padding to the body to offset the fixed header */
-body {
-  padding-top: 70px; /* Adjust as needed to ensure content is not hidden behind the fixed header */
+/* Close button styles */
+.close-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ccc;
+}
+
+.close-button:hover {
+  color: #000;
 }

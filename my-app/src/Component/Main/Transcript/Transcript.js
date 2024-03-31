@@ -10,9 +10,7 @@ const Transcript = ({ text, audioRef }) => {
 
     const handleTimeUpdate = () => {
       const currentTime = audioRef.current.currentTime;
-      console.log('Current Time:', currentTime);
       const index = findHighlightedIndex(currentTime);
-      console.log('Highlighted Index:', index); // Add console log for highlighted index
       setHighlightedIndex(index);
     };
 

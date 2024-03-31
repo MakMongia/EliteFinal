@@ -52,7 +52,7 @@ function News() {
           </audio>
           {/* Description for the audio */}
           <p className="audio-description">
-            Enjoy this motivational speech given by our CEO.
+            Please enjoy this motivational speech given by our CEO.
           </p>
           <Transcript
             text={transcriptText} // Pass the imported transcript text

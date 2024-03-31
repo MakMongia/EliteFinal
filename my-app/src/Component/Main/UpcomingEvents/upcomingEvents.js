@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import DataTable from '../DataTable/dataTable';
 import eventsData from './eventsData.json';
-import SearchBar from '../searchBar/searchBar'; // Import the SearchBar component
 import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function Events() {
@@ -19,17 +18,16 @@ function Events() {
   };
 
   return (
-        <ErrorBoundary> {/* errorBoundary added here */}
-    <section id="events">
-      <h1>Upcoming Events</h1>
-      <SearchBar placeholder={"Search by Event Name and Date"} onSearch={handleSearch} />
+    <ErrorBoundary> {/* errorBoundary added here */}
+      <section id="events">
+        <h1>Upcoming Events</h1>
         {filteredData.length > 0 ? (
           <DataTable data={filteredData} />
         ) : (
           <p><strong>No events match your search criteria. Please try searching for a different event.</strong></p>
         )}
       </section>
-      </ErrorBoundary> /* errorBoundary added here */
+    </ErrorBoundary> /* errorBoundary added here */
   );
 }
 
