@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/MakMongia/Elite-Final/static/css/main.3b3ce69f.css",
-    "main.js": "/MakMongia/Elite-Final/static/js/main.329f82fe.js",
-    "static/js/453.ed3810f9.chunk.js": "/MakMongia/Elite-Final/static/js/453.ed3810f9.chunk.js",
-    "static/media/Video1.mp4": "/MakMongia/Elite-Final/static/media/Video1.4d193649035dbace69fc.mp4",
-    "static/media/Banner1.png": "/MakMongia/Elite-Final/static/media/Banner1.7c4c07281ecaa7005aff.png",
-    "static/media/Banner3.png": "/MakMongia/Elite-Final/static/media/Banner3.4a95c5e63443189865d6.png",
-    "static/media/Banner2.png": "/MakMongia/Elite-Final/static/media/Banner2.0e7d9c0b27aae9e59673.png",
-    "static/media/Merch.png": "/MakMongia/Elite-Final/static/media/Merch.7e0385724c2c5ad16aa3.png",
-    "static/media/Audio.mp3": "/MakMongia/Elite-Final/static/media/Audio.087fd2bbe23eeceb85d8.mp3",
-    "static/media/Program2.jpg": "/MakMongia/Elite-Final/static/media/Program2.a58a45d051d7f0fc6259.jpg",
-    "static/media/Program1.jpg": "/MakMongia/Elite-Final/static/media/Program1.24559b66111b7907614b.jpg",
-    "static/media/Logo.png": "/MakMongia/Elite-Final/static/media/Logo.74de73873e1774072394.png",
-    "static/media/slick.svg": "/MakMongia/Elite-Final/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/MakMongia/Elite-Final/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/MakMongia/Elite-Final/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/MakMongia/Elite-Final/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/MakMongia/Elite-Final/index.html",
-    "main.3b3ce69f.css.map": "/MakMongia/Elite-Final/static/css/main.3b3ce69f.css.map",
-    "main.329f82fe.js.map": "/MakMongia/Elite-Final/static/js/main.329f82fe.js.map",
-    "453.ed3810f9.chunk.js.map": "/MakMongia/Elite-Final/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/MakMongia/EliteFinal/static/css/main.719129af.css",
+    "main.js": "/MakMongia/EliteFinal/static/js/main.9a300df7.js",
+    "static/js/453.ed3810f9.chunk.js": "/MakMongia/EliteFinal/static/js/453.ed3810f9.chunk.js",
+    "static/media/Video1.mp4": "/MakMongia/EliteFinal/static/media/Video1.4d193649035dbace69fc.mp4",
+    "static/media/Banner1.png": "/MakMongia/EliteFinal/static/media/Banner1.7c4c07281ecaa7005aff.png",
+    "static/media/Banner3.png": "/MakMongia/EliteFinal/static/media/Banner3.4a95c5e63443189865d6.png",
+    "static/media/Banner2.png": "/MakMongia/EliteFinal/static/media/Banner2.0e7d9c0b27aae9e59673.png",
+    "static/media/Merch.png": "/MakMongia/EliteFinal/static/media/Merch.7e0385724c2c5ad16aa3.png",
+    "static/media/Audio.mp3": "/MakMongia/EliteFinal/static/media/Audio.087fd2bbe23eeceb85d8.mp3",
+    "static/media/Program2.jpg": "/MakMongia/EliteFinal/static/media/Program2.a58a45d051d7f0fc6259.jpg",
+    "static/media/Program1.jpg": "/MakMongia/EliteFinal/static/media/Program1.24559b66111b7907614b.jpg",
+    "static/media/Logo.png": "/MakMongia/EliteFinal/static/media/Logo.74de73873e1774072394.png",
+    "static/media/slick.svg": "/MakMongia/EliteFinal/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/MakMongia/EliteFinal/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/MakMongia/EliteFinal/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/MakMongia/EliteFinal/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/MakMongia/EliteFinal/index.html",
+    "main.719129af.css.map": "/MakMongia/EliteFinal/static/css/main.719129af.css.map",
+    "main.9a300df7.js.map": "/MakMongia/EliteFinal/static/js/main.9a300df7.js.map",
+    "453.ed3810f9.chunk.js.map": "/MakMongia/EliteFinal/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b3ce69f.css",
-    "static/js/main.329f82fe.js"
+    "static/css/main.719129af.css",
+    "static/js/main.9a300df7.js"
   ]
 }
