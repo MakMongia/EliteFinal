@@ -1,67 +1,73 @@
-/* Footer.css */
-
 /* Footer container styles */
 .footer {
-  background-color: #ccc; /* Background color */
-  padding: 20px; /* Padding around content */
-  color: #333; /* Text color */
+  background-color: #ccc;
+  padding: 20px;
+  color: #333;
 }
 
 /* Links container styles */
 .links-container {
-  display: flex; /* Use flexbox */
-  justify-content: space-between; /* Spacing between links */
-  align-items: center; /* Vertical alignment */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* List styles */
 .footer-list {
-  margin-right: 20px; /* Spacing between lists */
+  margin-right: 20px;
 }
 
 /* List item styles */
 .footer-list li {
-  margin-bottom: 10px; /* Spacing between list items */
+  margin-bottom: 10px;
 }
 
 /* Contact information styles */
 .contact-info {
-  margin-left: 20px; /* Left margin for contact info */
+  margin-left: 20px;
 }
 
 /* Footer logo styles */
 .footer-logo {
-  width: 200px; /* Width of the logo */
-  margin-top: -20px; /* Adjust logo position */
+  width: 200px;
+  margin-top: -20px;
 }
 
 /* Footer link and paragraph styles */
 .footer-link,
 .contact-info p {
-  font-weight: bold; /* Bold font */
-  text-decoration: none; /* Remove underline */
-  cursor: pointer; /* Use pointer cursor */
-  margin-right: 20px; /* Spacing between links */
-}
-
-/* Policy link styles */
-.policies span {
-  text-decoration: none; /* Remove underline */
-  cursor: pointer; /* Use pointer cursor */
-  margin-right: 20px; /* Spacing between links */
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 /* Hover styles for links */
 .footer-link:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
+}
+
+/* Policy link styles */
+.policies span {
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 /* Set link color for policy links */
 .policies span {
-  color: #333; /* Link color */
+  color: #333;
 }
 
 /* Reduce space between paragraphs in contact info */
 .contact-info p {
-  margin: 5px 0; /* Adjust paragraph margin */
+  margin: 5px 0;
+}
+
+/* Policies section */
+.policies {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center items horizontally */
+  margin-top: 10px; /* Add margin to separate from the links */
+
 }

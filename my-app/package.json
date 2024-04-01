@@ -31,6 +31,12 @@
       "react-app/jest"
     ]
   },
+  "eslintConfig": {
+  "globals": {
+    "FontAwesomeIcon": "readonly"
+  }
+},
+
   "browserslist": {
     "production": [
       ">0.2%",

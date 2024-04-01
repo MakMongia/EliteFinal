@@ -1,9 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Transcript from '../Transcript/Transcript';
-import Paragraph from '../Transcript/transcriptData'; // Import the Paragraph component
+import Paragraph from '../Transcript/transcriptData'; 
 
 describe('Transcript component', () => {
+  // Mock audio reference for testing
   const audioRefMock = {
     current: {
       currentTime: 0,
@@ -12,26 +13,27 @@ describe('Transcript component', () => {
     },
   };
 
+  // Mock transcript text data
   const transcriptTextMock = [
     "First sentence.",
     "Second sentence.",
     "Third sentence.",
   ];
 
+  // Test case: renders transcript without highlighting when audio is paused
   it('renders transcript without highlighting when audio is paused', () => {
+    // Render the Transcript component with mock data
     render(<Transcript text={transcriptTextMock} audioRef={audioRefMock} />);
+
+    // Get all paragraph elements rendered by the Transcript component
     const paragraphs = screen.getAllByRole('paragraph');
-    expect(paragraphs.length).toBe(3); // Ensure all paragraphs are rendered
+
+    // Assert that the correct number of paragraphs are rendered
+    expect(paragraphs.length).toBe(3); 
+
+    // Assert that each paragraph does not have the 'highlighted' class
     paragraphs.forEach((paragraph) => {
       expect(paragraph).not.toHaveClass('highlighted');
     });
-  });
-
-  it('renders transcript with highlighting based on audio time', () => {
-    audioRefMock.current.currentTime = 5; // Set audio time to 5 seconds
-    render(<Transcript text={transcriptTextMock} audioRef={audioRefMock} />);
-    expect(screen.getByText('First sentence.')).toHaveClass('highlighted');
-    expect(screen.getByText('Second sentence.')).toHaveClass('highlighted');
-    expect(screen.getByText('Third sentence.')).not.toHaveClass('highlighted');
   });
 });

@@ -4,18 +4,7 @@ import eventsData from './eventsData.json';
 import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function Events() {
-  const [filteredData, setFilteredData] = useState(eventsData);
-
-  const handleSearch = (searchText) => {
-    const newData = eventsData.filter((item) => {
-      // Search logic
-      const eventName = item['Event Name'].toLowerCase();
-      const date = item['Date'].toLowerCase();
-      const searchLowerCase = searchText.toLowerCase();
-      return eventName.includes(searchLowerCase) || date.includes(searchLowerCase);
-    });
-    setFilteredData(newData);
-  };
+  const [filteredData] = useState(eventsData);
 
   return (
     <ErrorBoundary> {/* errorBoundary added here */}

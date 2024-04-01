@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import "./Transcript.css"
+import './Transcript.css';
 
 const Transcript = ({ text, audioRef }) => {
-  const [highlightedIndex, setHighlightedIndex] = useState(-1); // Initial state set to -1
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const Transcript = ({ text, audioRef }) => {
           return i;
         }
       }
-      return -1; // No paragraph should be highlighted
+      return -1;
     };
 
     const getParagraphDuration = (index) => {
@@ -37,8 +37,6 @@ const Transcript = ({ text, audioRef }) => {
         5, // Duration for the seventh paragraph
         8, // Duration for the eighth paragraph
         2, // Duration for the ninth paragraph
-        
-        // Add more durations as needed for each paragraph
       ];
       // Return the duration for the corresponding paragraph index
       return customDurations[index] || 0;
@@ -46,8 +44,6 @@ const Transcript = ({ text, audioRef }) => {
 
     const handleAudioPause = () => {
       setIsPaused(true);
-      // Reset highlighted index only if not already paused
-      if (!isPaused) setHighlightedIndex(-1);
     };
 
     const handleAudioPlay = () => {
@@ -63,12 +59,12 @@ const Transcript = ({ text, audioRef }) => {
       audioRef.current.removeEventListener('pause', handleAudioPause);
       audioRef.current.removeEventListener('play', handleAudioPlay);
     };
-  }, [audioRef, isPaused, text]); // Added text to dependency array
+  }, [audioRef, text]);
 
   return (
     <div className={`transcript ${isPaused ? 'paused' : ''}`}>
       {text.map((sentence, index) => (
-        <p key={index} className={index === highlightedIndex ? 'highlighted' : ''}>
+        <p key={index} role="paragraph" className={index === highlightedIndex ? 'highlighted' : ''}>
           {sentence}
         </p>
       ))}

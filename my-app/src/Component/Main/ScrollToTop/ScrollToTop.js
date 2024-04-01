@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ScrollTopTop.css'; // Import the CSS file
+import './ScrollToTop.css'; // Import the CSS file
 import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function ScrollToTopButton() {

@@ -1,12 +1,53 @@
-.clear-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #999; /* Adjust the color as needed */
-  font-size: 16px; /* Adjust the font size as needed */
-  margin-left: 5px; /* Adjust the margin as needed */
+/* Search bar styles */
+.search-bar {
+  display: inline-block;
+  position: relative;
 }
 
-.clear-button:hover {
-  color: #555; /* Adjust the hover color as needed */
+.search-bar form {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+/* Adjust the width of the search bar input */
+.search-bar input[type="text"] {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+/* Remove outline on focus */
+.search-bar input[type="text"]:focus {
+  outline: none;
+}
+
+/* Search results styles */
+.search-results {
+  position: absolute;
+  top: calc(100% - 720px);
+  left: auto;
+  right: 0;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Individual search result item styles */
+.search-results div {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Hover styles for search result items */
+.search-results div:hover {
+  background-color: #f0f0f0;
 }

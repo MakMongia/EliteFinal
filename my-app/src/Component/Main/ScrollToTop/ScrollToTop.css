@@ -1,0 +1,31 @@
+.scroll-to-top-button {
+  position: fixed; /* Position the button fixed on the screen */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  background-color: #ccc; /* Background color of the button */
+  color: #666; /* Text color */
+  border: none; /* No border */
+  border-radius: 50%; /* Make it a circle */
+  width: 50px; /* Button width */
+  height: 50px; /* Button height */
+  font-size: 24px; /* Font size */
+  cursor: pointer; /* Cursor style */
+  transition: opacity 0.3s ease-in-out; /* Transition effect for opacity */
+  opacity: 0; /* Initially hidden */
+  display: flex; /* Display as flex container */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.scroll-to-top-button.visible {
+  opacity: 1; /* Show the button */
+}
+
+.scroll-to-top-button:hover {
+  background-color: #999; /* Darker background color on hover */
+  color: #fff; /* Lighter text color on hover */
+}
+
+.scroll-to-top-button i {
+  margin-top: 2px; /* Adjust the position of the icon */
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header from './Component/Header/Header';
+import Header from './Component/Header/Navigation/Navigation';
 import Home from './Component/Main/Home/Home';
 import Schedule from './Component/Main/Schedule/Schedule';
 import Program from './Component/Main/Program/Program';
@@ -22,6 +22,7 @@ const allData = [
   { id: 6, title: 'Weather', component: Weather },
   { id: 7, title: 'Merchandise', component: Merchandise },
   { id: 8, title: 'Contact Us', component: ContactUs },
+  { id: 8, title: 'Footer', component: Footer }
   // Add more items as needed
 ];
 
