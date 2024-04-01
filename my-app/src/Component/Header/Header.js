@@ -1,23 +1,23 @@
-// Header.js
 import React, { useState } from 'react';
 import logo from '../../assets/images/Logo.png';
 import './Header.css';
-import SearchBar from '../Main/searchBar/searchBar'; // Assuming SearchBar.js is in the same directory
+import SearchLogic from './searchBar/searchLogic'; // Import SearchLogic component
+import Search from './searchBar/searchBar'; // Import Search component
 
-function Header() {
+function Header({ searchResults, setSearchText, handleSearch, setSearchResults }) { // Add setSearchResults to props
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  const toggleSearch = () => {
-    setIsSearchOpen(!isSearchOpen);
+  const handleInputFocus = () => {
+    setIsSearchOpen(true);
   };
 
-  const handleCloseSearch = () => {
-    setIsSearchOpen(false);
+  const handleInputBlur = () => {
+    setIsSearchOpen(false); // Always set isSearchOpen to false on blur
   };
 
-  const handleSearch = (searchText) => {
-    // Implement your search logic here
-    console.log("Searching for:", searchText);
+  const handleClearSearch = () => {
+    setSearchText('');
+    setSearchResults([]);
   };
 
   return (
@@ -34,16 +34,27 @@ function Header() {
           <li><a href="#merch">Merch</a></li>
           <li><a href="#contactus">ContactUs</a></li>
           <li>
-            {isSearchOpen ? (
-              <SearchBar onClose={handleCloseSearch} onSearch={handleSearch} />
-            ) : (
-              <button className="search-button" onClick={toggleSearch}>
-                Search
-              </button>
-            )}
+            <div className="search-wrapper">
+              {/* Render the Search component conditionally based on isSearchOpen */}
+              {isSearchOpen && <Search onSearch={handleSearch} />}
+              <input
+                type="text"
+                placeholder="Search..."
+                onFocus={handleInputFocus}
+                onBlur={handleInputBlur}
+                onChange={(e) => {
+                  const inputValue = e.target.value;
+                  console.log("Input Value:", inputValue); // Log input value
+                  handleSearch(inputValue);
+                }}
+              />
+              <button onClick={handleClearSearch}>Clear</button>
+            </div>
           </li>
         </ul>
       </nav>
+      {/* Render the SearchLogic component below the search bar */}
+      <SearchLogic searchResults={searchResults} />
     </header>
   );
 }

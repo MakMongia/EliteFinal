@@ -1,25 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DataTable from '../DataTable/dataTable';
 import scheduleDataJson from '../Schedule/scheduleData.json';
 import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function Schedule() {
-  const [filteredData, setFilteredData] = useState(scheduleDataJson);
-
-  const handleSearch = (searchText) => {
-    const newData = scheduleDataJson.filter((item) => {
-      if (!item || typeof item.Day !== 'string' || typeof item.Time !== 'string' || typeof item.Event !== 'string') {
-        return false;
-      }
-      const lowerCaseSearchText = searchText.toLowerCase();
-      return (
-        item.Day.toLowerCase().includes(lowerCaseSearchText) ||
-        item.Time.toLowerCase().includes(lowerCaseSearchText) ||
-        item.Event.toLowerCase().includes(lowerCaseSearchText)
-      );
-    });
-    setFilteredData(newData);
-  };
+  const filteredData = scheduleDataJson; // Assuming no initial filtering required
 
   return (
     <ErrorBoundary> {/* errorBoundary added here */}
