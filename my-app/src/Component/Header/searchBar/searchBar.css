@@ -4,13 +4,10 @@
   position: relative;
 }
 
-.search-bar form {
-  display: flex;
-  align-items: center;
-  margin: 0;
+.input-wrapper {
+  position: relative;
 }
 
-/* Adjust the width of the search bar input */
 .search-bar input[type="text"] {
   width: 100px;
   padding: 8px;
@@ -24,6 +21,14 @@
 /* Remove outline on focus */
 .search-bar input[type="text"]:focus {
   outline: none;
+}
+
+/* Position the clear button absolutely */
+.search-bar button {
+  position: absolute;
+  right: 5px;
+  top: calc(50% + 2px); /* Adjust the top value as needed */
+  transform: translateY(-150%);
 }
 
 /* Search results styles */

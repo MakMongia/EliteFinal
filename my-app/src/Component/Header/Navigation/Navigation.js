@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import logo from '../../../assets/images/Logo.png';
 import './Navigation.css';
 import SearchLogic from '../searchBar/searchLogic'; // Import SearchLogic component
-import Search from '../searchBar/searchBar'; // Import Search component
+import Search from '../searchBar/searchBar';
 
-function Header({ searchResults, setSearchText, handleSearch, setSearchResults }) { // Add setSearchResults to props
+function Header({ searchResults, setSearchText, handleSearch, setSearchResults }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const handleInputFocus = () => {
@@ -19,6 +19,13 @@ function Header({ searchResults, setSearchText, handleSearch, setSearchResults }
     setSearchText('');
     setSearchResults([]);
   };
+
+  // Event handler for the navigation button to clear search text and trigger navigation
+const handleNavigationButtonClick = () => {
+  handleClearSearch();
+  console.log("Navigation button clicked"); // Check if this message is logged
+  // Add navigation action here
+};
 
   return (
     <header>
@@ -36,7 +43,7 @@ function Header({ searchResults, setSearchText, handleSearch, setSearchResults }
           <li>
             <div className="search-wrapper">
               {/* Render the Search component conditionally based on isSearchOpen */}
-              {isSearchOpen && <Search onSearch={handleSearch} />}
+              {isSearchOpen && <Search onSearch={handleSearch} onClear={handleClearSearch} />} // Pass handleClearSearch as onClear prop
               <input
                 type="text"
                 placeholder="Search..."
@@ -48,7 +55,8 @@ function Header({ searchResults, setSearchText, handleSearch, setSearchResults }
                   handleSearch(inputValue);
                 }}
               />
-              <button onClick={handleClearSearch}>Clear</button>
+              {/* Use the navigation button to clear search text and trigger navigation */}
+              <button onClick={handleNavigationButtonClick}>NavigationButton</button>
             </div>
           </li>
         </ul>

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import "./searchBar.css";
 
-function SearchBar({ onSearch }) {
+function SearchBar({ onSearch, onClear }) { // Add onClear function as prop
   const [searchText, setSearchText] = useState('');
   const [isInputFocused, setIsInputFocused] = useState(false);
   const [showSearchResults, setShowSearchResults] = useState(false);
@@ -22,10 +20,14 @@ function SearchBar({ onSearch }) {
     onSearch(inputValue);
   };
 
-  const handleClear = () => {
-    setSearchText('');
-    setShowSearchResults(false);
-  };
+const handleClear = () => {
+  setSearchText('');
+  setShowSearchResults(false);
+  onClear(); // Call the onClear function passed from parent
+  console.log("Search text cleared"); // Check if this message is logged
+};
+
+
 
   useEffect(() => {
     setShowSearchResults(searchText.trim() !== '' && isInputFocused);
@@ -35,20 +37,21 @@ function SearchBar({ onSearch }) {
     <div className="search-bar" onClick={handleInputFocus}>
       {isInputFocused ? (
         <form onSubmit={(e) => e.preventDefault()}>
-          <input
-            type="text"
-            value={searchText}
-            onChange={handleChange}
-            onBlur={handleInputBlur}
-            placeholder="Search..."
-            autoFocus
-          />
-          <button type="button" onClick={handleClear}>
-            <FontAwesomeIcon icon={faTimes} />
-          </button>
+          <div className="input-wrapper">
+            <input
+              type="text"
+              value={searchText}
+              onChange={handleChange}
+              onBlur={handleInputBlur}
+              placeholder="Search..."
+              autoFocus
+            />
+            {/* Change the button text to "X" */}
+            <button type="button" onClick={handleClear}>X</button>
+          </div>
         </form>
       ) : (
-        <span>Search...</span>
+        null
       )}
       {showSearchResults && (
         <div className="search-results">

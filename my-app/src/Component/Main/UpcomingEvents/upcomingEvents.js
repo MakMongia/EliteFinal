@@ -1,22 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DataTable from '../DataTable/dataTable';
 import eventsData from './eventsData.json';
 import ErrorBoundary from '../../errorBoundary'; // Import Error Boundary
 
 function Events() {
-  const [filteredData] = useState(eventsData);
+  const filteredData = eventsData;
 
   return (
-    <ErrorBoundary> {/* errorBoundary added here */}
+    <ErrorBoundary>
       <section id="events">
         <h1>Upcoming Events</h1>
-        {filteredData.length > 0 ? (
+        <div className="events-container">
+          {/* Always render DataTable */}
           <DataTable data={filteredData} />
-        ) : (
-          <p><strong>No events match your search criteria. Please try searching for a different event.</strong></p>
-        )}
+        </div>
       </section>
-    </ErrorBoundary> /* errorBoundary added here */
+    </ErrorBoundary>
   );
 }
 

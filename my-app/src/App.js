@@ -31,14 +31,17 @@ function App() {
   const [searchText, setSearchText] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
-  const handleSearch = (query) => {
-    setSearchText(query);
-    const results = allData.filter(item => 
-      item.title.toLowerCase().includes(query.toLowerCase()) ||
-      (item.component && item.component.toString().toLowerCase().includes(query.toLowerCase()))
-    );
-    setSearchResults(results);
-  };
+const handleSearch = (query) => {
+  setSearchText(query);
+  const results = allData.filter(item => 
+    item.title.toLowerCase().includes(query.toLowerCase()) ||
+    (item.component && item.component.toString().toLowerCase().includes(query.toLowerCase()))
+  );
+  setSearchResults(results);
+  console.log("Search Text:", query); // Log the search text
+  console.log("Search Results:", results); // Log the search results
+};
+
 
   // Function to render component based on title
   const renderComponent = (title) => {
