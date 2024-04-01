@@ -46,7 +46,7 @@ function News() {
 
         {/* Audio container */}
         <div className="audio-container">
-          <audio controls autoPlay ref={audioRef}>
+          <audio controls ref={audioRef}>
             <source src={myAudio} type="audio/mpeg" />
             Your browser does not support the audio tag.
           </audio>
