@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../../../assets/images/Logo.png';
 import './Navigation.css';
-import SearchLogic from '../searchBar/searchLogic'; // Import SearchLogic component
-import Search from '../searchBar/searchBar';
+import SearchLogic from '../searchLogic/searchLogic'; // Import SearchLogic component
 
-function Header({ searchResults, setSearchText, handleSearch, setSearchResults }) {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+function Navigation({ searchResults, setSearchResults, handleSearch }) {
+  const [searchText, setSearchText] = useState('');
+  const [isSearchOpen, setIsSearchOpen] = useState(false); // Add isSearchOpen state variable
 
   const handleInputFocus = () => {
     setIsSearchOpen(true);
@@ -20,12 +20,15 @@ function Header({ searchResults, setSearchText, handleSearch, setSearchResults }
     setSearchResults([]);
   };
 
-  // Event handler for the navigation button to clear search text and trigger navigation
-const handleNavigationButtonClick = () => {
-  handleClearSearch();
-  console.log("Navigation button clicked"); // Check if this message is logged
-  // Add navigation action here
-};
+  const handleChange = (e) => {
+    const inputValue = e.target.value;
+    setSearchText(inputValue);
+    handleSearch(inputValue);
+  };
+
+  useEffect(() => {
+    setIsSearchOpen(searchText.trim() !== '');
+  }, [searchText]);
 
   return (
     <header>
@@ -43,20 +46,24 @@ const handleNavigationButtonClick = () => {
           <li>
             <div className="search-wrapper">
               {/* Render the Search component conditionally based on isSearchOpen */}
-              {isSearchOpen && <Search onSearch={handleSearch} onClear={handleClearSearch} />} // Pass handleClearSearch as onClear prop
-              <input
-                type="text"
-                placeholder="Search..."
-                onFocus={handleInputFocus}
-                onBlur={handleInputBlur}
-                onChange={(e) => {
-                  const inputValue = e.target.value;
-                  console.log("Input Value:", inputValue); // Log input value
-                  handleSearch(inputValue);
-                }}
-              />
-              {/* Use the navigation button to clear search text and trigger navigation */}
-              <button onClick={handleNavigationButtonClick}>NavigationButton</button>
+              <div className="search-bar">
+                <form onSubmit={(e) => e.preventDefault()}>
+                  <div className="input-wrapper">
+                    <input
+                      type="text"
+                      value={searchText}
+                      onChange={handleChange}
+                      onFocus={handleInputFocus}
+                      onBlur={handleInputBlur}
+                      placeholder="Search..."
+                      autoFocus={isSearchOpen}
+                      className={isSearchOpen ? 'expanded' : ''}
+                    />
+                  </div>
+                </form>
+              </div>
+              {/* Use the "X" button to clear search text and trigger navigation */}
+              <button className="navigation-button" onClick={handleClearSearch} title="Clear search field">X</button>
             </div>
           </li>
         </ul>
@@ -67,4 +74,4 @@ const handleNavigationButtonClick = () => {
   );
 }
 
-export default Header;
+export default Navigation;
