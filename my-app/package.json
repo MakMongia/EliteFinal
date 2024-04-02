@@ -26,17 +26,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "globals": {
+      "FontAwesomeIcon": "readonly"
+    }
   },
-  "eslintConfig": {
-  "globals": {
-    "FontAwesomeIcon": "readonly"
-  }
-},
-
   "browserslist": {
     "production": [
       ">0.2%",
@@ -53,8 +46,9 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/react-hooks": "^7.0.2",
+    "gh-pages": "^6.1.1",
     "jest": "^27.5.1",
     "match-media-mock": "^0.1.1"
   },
-  "homepage": "https://github.com/MakMongia/Elite-Final"
+  "homepage": "https://github.com/MakMongia/EliteFinal"
 }
