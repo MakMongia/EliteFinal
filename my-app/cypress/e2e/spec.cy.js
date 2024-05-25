@@ -3,7 +3,7 @@
 describe('Navigation', () => {
   beforeEach(() => {
     // Visit the page before each test
-    cy.visit('http://172.24.102.162:3000/MakMongia/Elite-Final');
+    cy.visit('https://localhost:8000');
   });
 
   it('should render all hyperlinks in the navigation menu', () => {
